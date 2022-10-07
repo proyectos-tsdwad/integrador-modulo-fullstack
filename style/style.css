@@ -95,3 +95,36 @@ ul li {
   list-style: none;
 }
 
+/* ------------ RESPONSIVE BOOK-DETAIL ------------ */
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .book {
+    flex-wrap: wrap;
+  }
+
+  .description {
+    padding: 0;
+  }
+}
