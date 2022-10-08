@@ -1,4 +1,105 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
+
+
+/* VARIABLES */
+
+:root {
+    --primary-red: #A02A44;
+    --secondary-red: #E35352;
+    --primary-pink: #EEE4E39C;
+    --primary-green: #B9CC4C;
+    --primary-black: #5D5E5F;
+    --primary-black-opacity: rgba(93, 94, 95, 0.9);
+    --secondary-black: #303754;
+    --primary-grey: #A1A1A5;
+}
+
+/* COMMONS */
+
+.primary-button {
+    color: white;
+    border: none;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-radius: 10px;
+    background-color: var(--secondary-red);
+    transition-duration: 1s;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-red);
+    transition-duration: 1s;
+}
+
+.text-primary-red {
+    color: var(--primary-red);
+}
+
+.text-primary-black {
+    color: var(--primary-black);
+}
+
+.text-secondary-black {
+    color: var(--secondary-black);
+}
+
+.bg-primary-pink {
+    background-color: var(--primary-pink);
+}
+
+.fw-300{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.fw-400{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fw-500{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.fw-600{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.fw-700{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.fw-800{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+}
+
+
 /* nav bar */
 
-/* TODO */
 
+
+/* HEADER */
+
+.header-title {
+    font-weight: 400;
+    font-size: 3em;
+    font-family: 'Mulish', sans-serif;
+}
+
+.header-paragraph {
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
