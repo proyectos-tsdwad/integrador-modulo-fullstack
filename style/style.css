@@ -1,4 +1,45 @@
+/* VARIABLES */
+
+:root {
+    --primary-red: rgba(160, 42, 68);
+    --secondary-red: #E35352;
+    --secondary-pink: #EEE4E39C;
+}
+
+/* COMMONS */
+
+.primary-button {
+    color: white;
+    border: none;
+    padding-top: 0.7rem;
+    padding-bottom:  0.7rem;
+    border-radius: 10px;
+    background-color: var(--secondary-red);
+    transition-duration: 1s;
+}
+
+.primary-button:hover {
+background-color: var(--primary-red);
+transition-duration: 1s;
+}
+
+.bg-primary-pink{
+background-color: var(--secondary-pink);
+}
+
+
 /* nav bar */
 
-/* TODO */
 
+
+/* HEADER */
+
+.strong-red {
+    color: var(--primary-red);
+}
+
+.header-paragraph {
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
