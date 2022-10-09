@@ -9,6 +9,7 @@
     --primary-red: #A02A44;
     --secondary-red: #E35352;
     --primary-pink: #EEE4E39C;
+    --secondary-pink: #EDDCDC;
     --primary-green: #B9CC4C;
     --primary-black: #5D5E5F;
     --primary-black-opacity: rgba(93, 94, 95, 0.9);
@@ -49,6 +50,10 @@
     background-color: var(--primary-pink);
 }
 
+.bg-secondary-pink {
+    background-color: var(--secondary-pink);
+}
+
 .fw-300{
     font-family: 'Mulish', sans-serif;
     font-style: normal;
@@ -85,6 +90,10 @@
     font-weight: 800;
 }
 
+.bg-half-color{
+    background: linear-gradient(90deg, var(--secondary-pink) 50%, #FFFFFF 50%);
+}
+
 
 /* nav bar */
 
@@ -102,4 +111,10 @@
     line-height: 2rem;
     font-size: 1rem;
     font-weight: 400;
+}
+
+/* REGISTER */
+
+.pru{
+    height: 100%;
 }
