@@ -1,5 +1,5 @@
-import { Book } from "../book/book.model.js";
-import { BookService } from "../book/book.service.js";
+import { Book } from "../book/book.model";
+import { BookService } from "../book/book.service";
 
 let bookService = new BookService();
 let books: Book[] = bookService.bookList;
@@ -26,7 +26,8 @@ function fillRecomendedBooks() {
     divRow.classList.add("row");
 
     let bookCover = document.createElement("img");
-    bookCover.classList.add("img-fluid col-3");
+    bookCover.classList.add("img-fluid");
+    bookCover.classList.add("col-5");
     bookCover.src = book.img;
     divRow.appendChild(bookCover);
 
