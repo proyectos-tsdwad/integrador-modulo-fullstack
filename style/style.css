@@ -203,27 +203,6 @@ nav form button:hover {
   color: #e35352;
 }
 
-.menu__btn {
-  border: none;
-
-}
-
-.menu__btn button {
-  width: 100px;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  font-size: 1rem;
-  background-color: #ead8d8;
-  border: 0;
-}
-
-.menu__btn button:hover {
-  background: var(--primary-red);
-  border-radius: 10px;
-  
-  color: #fcfeff;
-  transition-duration: 0.5s;
-} 
 
 @media all and (max-width: 700px) {
   .menu {
