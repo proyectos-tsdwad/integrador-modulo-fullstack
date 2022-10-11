@@ -13,7 +13,24 @@
 
 <body>
   
-  <h1>Hello, world!</h1>
+  <nav class="menu"> 
+    <div class="menu__logo">
+      <a href="#" class="fw-400"> <img src="../assets/img/logo-biblioteca.jpg" alt="LOGO" /></a>
+    </div>
+    <div class="menu__lista">
+      <li class="menu__item fw-400"><a href="#">Libros</a></li>
+      <li class="menu__item fw-400"><a href="#">Contacto</a></li>
+    </div>
+
+    <form action="#">
+      <input type="search" class="search-data fw-400" placeholder="Busca tu libro" required />
+      <button type="submit" class="bi bi-search"></button>
+    </form>
+
+    <div class="menu__btn">
+      <button class="fw-400">Ingresar</button>
+    </div>
+  </nav>
 
   <footer id="footer" class="container-fluid row">
     <div class="footer-newsletter p-5">
