@@ -120,10 +120,10 @@ nav .menu__logo {
   align-items: center;
 }
 
-nav .menu__logo a {
-  color: var(--primary-black);
-  letter-spacing: -1px;
-  text-decoration: none;
+nav .menu__logo a img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .menu__lista {
