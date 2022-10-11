@@ -9,6 +9,7 @@
     --primary-red: #A02A44;
     --secondary-red: #E35352;
     --primary-pink: #EEE4E39C;
+    --secondary-pink: #EDDCDC;
     --primary-green: #B9CC4C;
     --primary-yellow: #F8B84E;
     --primary-black: #5D5E5F;
@@ -67,6 +68,10 @@ body{
     background-color: var(--primary-pink);
 }
 
+.bg-secondary-pink {
+    background-color: var(--secondary-pink);
+}
+
 .fw-300{
     font-family: 'Mulish', sans-serif;
     font-style: normal;
@@ -101,6 +106,10 @@ body{
     font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 800;
+}
+
+.bg-half-color{
+    background: linear-gradient(90deg, var(--secondary-pink) 50%, #FFFFFF 50%);
 }
 
 
