@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
 
 
+/* ALL */
+
+*{
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+}
+
 /* VARIABLES */
 
 :root {
@@ -11,10 +18,11 @@
     --primary-pink: #EEE4E39C;
     --primary-green: #B9CC4C;
     --primary-black: #5D5E5F;
-    --primary-black-opacity: rgba(93, 94, 95, 0.9);
+    --primary-black-opac: rgba(93, 94, 95, 0.9);
     --secondary-black: #303754;
     --primary-grey: #A1A1A5;
 }
+
 
 /* COMMONS */
 
@@ -41,6 +49,10 @@
     color: var(--primary-black);
 }
 
+.text-primary-black-opac {
+  color: var(--primary-black-opac);
+}
+
 .text-secondary-black {
     color: var(--secondary-black);
 }
@@ -50,38 +62,26 @@
 }
 
 .fw-300{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 300;
 }
 
 .fw-400{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 400;
 }
 
 .fw-500{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 500;
 }
 
 .fw-600{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 600;
 }
 
 .fw-700{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 700;
 }
 
 .fw-800{
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
     font-weight: 800;
 }
 
@@ -93,13 +93,26 @@
 /* HEADER */
 
 .header-title {
-    font-weight: 400;
     font-size: 3em;
-    font-family: 'Mulish', sans-serif;
 }
 
 .header-paragraph {
     line-height: 2rem;
     font-size: 1rem;
-    font-weight: 400;
+}
+
+/* BOOK COMPONENT */
+
+.book-resume h2, h3{
+  font-size: 1rem;
+}
+
+.book-resume h2{
+  color: var(--primary-black-opac);
+  font-weight: 500;
+}
+
+.book-resume h3{
+  color: var(--secondary-black);
+  font-weight: 600;
 }

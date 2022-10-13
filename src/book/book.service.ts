@@ -12,10 +12,19 @@ export class BookService {
 
   public fillBookList() {
     this._bookList = [
-      new Book('Todo por volver a verte', '/assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '/assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4)
+
     ]
   }
 
