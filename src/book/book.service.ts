@@ -4,33 +4,121 @@ import { Publisher } from "../publisher/publisher.model";
 
 export class BookService {
 
-  private _bookList: Book[] = [];
+  private static  _bookServiceInstance = new BookService();
 
-  public constructor() {
-    this.fillBookList();
+  private constructor(){}
+
+  static get bookService(){
+    if (!this._bookServiceInstance){
+      return new BookService();
+    }
+    return this._bookServiceInstance;
   }
 
-  public fillBookList() {
-    this._bookList = [
+
+  public  getRecommended(): Book[] {
+
+    let recommendedBooks = [
       new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4),
-        new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
         '', 256, 'Español', 'Romance', new Date, 4)
 
     ]
+
+    return recommendedBooks;
   }
 
+  public  getNewIncomings(): Book[] {
 
-  public get bookList(): Book[] {
-    return this._bookList;
+    let incomingBooks = [
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4)
+
+    ]
+
+    return incomingBooks;
+  }
+
+  public  getBestSelling(): Book[] {
+
+    let bestSellingBooks = [
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4)
+
+    ]
+
+    return bestSellingBooks;
+  }
+
+  public  getByCategory(): Book[] {
+
+    let booksByCategory = [
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4)
+
+    ]
+
+    return booksByCategory;
+  }
+
+  public  getRentalHistory(): Book[] {
+
+    let rentalHistoryBooks = [
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4),
+      new Book('Todo por volver a verte', '../assets/img/books covers/todo-por-volver-a-verte.png', '', new Author('Florencia Vercellone'), 10, new Publisher('Ivrea'),
+        '', 256, 'Español', 'Romance', new Date, 4)
+
+    ]
+
+    return rentalHistoryBooks;
   }
 
 }
