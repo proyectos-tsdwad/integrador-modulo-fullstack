@@ -186,9 +186,9 @@ body{
 
 .mail-img {
     position: absolute;
-left: 5.21%;
-right: 5.21%;
-bottom: -20%;
+    left: 5.21%;
+    right: 5.21%;
+    bottom: 25%;
 
 
     
@@ -225,9 +225,9 @@ bottom: -20%;
 
 .tel-img {
     position: absolute;
-left: 5.73%;
-right: 1.17%;
-bottom: 15%;
+    left: 5%;
+    right: 1%;
+    bottom: 12%;
 }
 
 .ubi {
@@ -260,9 +260,9 @@ bottom: 15%;
 
 .ubi-img {
     position: absolute;
-    left: 5.73%;
+    left: 5%;
     right: 9.38%;
-    bottom: -1%;
+    bottom: -5%;
 }
 
 
@@ -274,8 +274,8 @@ bottom: 15%;
     position: absolute;
     width: 456px;
     height: 50px;
-    left: 588px;
-    top: 288px;
+    left: 80px;
+    top: 68px;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
@@ -288,8 +288,8 @@ bottom: 15%;
     position: absolute;
     width: 717px;
     height: 28px;
-    left: 588px;
-    top: 362px;
+    left: 80px;
+    top: 155px;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 500;
@@ -304,8 +304,8 @@ bottom: 15%;
     position: absolute;
     width: 710px;
     height: 62px;
-    left: 588px;
-    top: 460px;
+    left: 80px;
+    top: 210px;
     background: #FFFFFF;
     border: 1px solid #D3D3D3;
     border-radius: 6px;
@@ -316,8 +316,8 @@ bottom: 15%;
     position: absolute;
     width: 710px;
     height: 62px;
-    left: 588px;
-    top: 559px;
+    left: 80px;
+    top: 300px;
     background: #FFFFFF;
     border: 1px solid #D3D3D3;
     border-radius: 6px;
@@ -328,8 +328,8 @@ bottom: 15%;
     position: absolute;
     width: 710px;
     height: 126px;
-    left: 588px;
-    top: 659px;
+    left: 80px;
+    top: 390px;
     background: #FFFFFF;
     border: 1px solid #D3D3D3;
     border-radius: 6px;
@@ -339,8 +339,8 @@ bottom: 15%;
     position: absolute;
     width: 710px;
     height: 64px;
-    left: 588px;
-    top: 823px;
+    left: 80px;
+    top: 580px;
     background: #E35352;
     border-radius: 15px;
     font-family: 'Mulish';
@@ -359,7 +359,7 @@ bottom: 15%;
     top: 225px;
     background: #FEFEFE;
     border-radius: 20px;
-}
+}  
 
 
 /* FOOTER */
