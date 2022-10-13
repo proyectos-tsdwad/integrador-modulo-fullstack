@@ -22,6 +22,7 @@
 body{
     font-family: 'Mulish', sans-serif;
     color: var(--primary-black);
+    background-color:rgba(238, 228, 227, 0.4);
 }
 
 .primary-button {
@@ -107,6 +108,260 @@ body{
 /* nav bar */
 
 
+/* FORM CONTACT */  
+
+
+.tittle-form-p {
+    position: absolute;
+    width: 242px;
+    height: 50px;
+    left: 60px;
+    top: 225px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #A02A44;
+}
+
+.comment-form-p {
+    position: absolute;
+    width: 372px;
+    height: 56px;
+    left: 60px;
+    top: 306px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgba(93, 94, 95, 0.68);
+}
+
+.social-img {
+    position: absolute;
+    width: 249px;
+    height: 64.62px;
+    left: 60px;
+    top: 394px;
+}
+
+.line-img {
+    position: absolute;
+    width: 335.05px;
+    height: 0px;
+    left: 59.97px;
+    top: 509px;
+    border: 1px solid rgba(165, 165, 165, 0.49);
+}
+
+.correo {
+    position: absolute;
+    width: 186px;
+    height: 28px;
+    left: 62px;
+    top: 546px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #5D5E5F;
+}
+
+.correo-contact {
+    position: absolute;
+    width: 278px;
+    height: 30px;
+    left: 140px;
+    top: 607px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #5D5E5F;
+}
+
+.mail-img {
+    position: absolute;
+left: 5.21%;
+right: 5.21%;
+bottom: -20%;
+
+
+    
+}
+
+
+.tel {
+    position: absolute;
+    width: 88px;
+    height: 28px;
+    left: 60px;
+    top: 671px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #5D5E5F;
+}
+
+.tel-contact {
+    position: absolute;
+    width: 144px;
+    height: 30px;
+    left: 140px;
+    top: 732px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #5D5E5F;
+}
+
+.tel-img {
+    position: absolute;
+left: 5.73%;
+right: 1.17%;
+bottom: 15%;
+}
+
+.ubi {
+    position: absolute;
+    width: 102px;
+    height: 28px;
+    left: 60px;
+    top: 802px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #5D5E5F;
+}
+
+.ubi-contact {
+    position: absolute;
+    width: 323px;
+    height: 60px;
+    left: 140px;
+    top: 863px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #5D5E5F;
+}
+
+.ubi-img {
+    position: absolute;
+    left: 5.73%;
+    right: 9.38%;
+    bottom: -1%;
+}
+
+
+
+
+
+
+.title-form {
+    position: absolute;
+    width: 456px;
+    height: 50px;
+    left: 588px;
+    top: 288px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #303754;
+}
+
+.comment-form {
+    position: absolute;
+    width: 717px;
+    height: 28px;
+    left: 588px;
+    top: 362px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: rgba(93, 94, 95, 0.68);
+}
+
+
+.name {
+    box-sizing: border-box;
+    position: absolute;
+    width: 710px;
+    height: 62px;
+    left: 588px;
+    top: 460px;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 6px;
+}
+
+.mail {
+    box-sizing: border-box;
+    position: absolute;
+    width: 710px;
+    height: 62px;
+    left: 588px;
+    top: 559px;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 6px;
+}
+
+.coment {
+    box-sizing: border-box;
+    position: absolute;
+    width: 710px;
+    height: 126px;
+    left: 588px;
+    top: 659px;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 6px;
+}
+
+.send {
+    position: absolute;
+    width: 710px;
+    height: 64px;
+    left: 588px;
+    top: 823px;
+    background: #E35352;
+    border-radius: 15px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 33px;
+    color: #FCFEFF;
+}
+
+.form {
+    position: absolute;
+    width: 873px;
+    height: 737px;
+    left: 507px;
+    top: 225px;
+    background: #FEFEFE;
+    border-radius: 20px;
+}
+
+
 /* FOOTER */
 footer {
     background-color: var(--primary-pink);
@@ -142,3 +397,5 @@ footer {
     font-size: 1rem;
     font-weight: 400;
 }
+
+
