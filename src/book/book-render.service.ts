@@ -1,57 +1,40 @@
+import { stringify } from "querystring";
 import { Book } from "./book.model";
 
 export class BookRenderService {
 
-  private static _bookRenderInstance = new BookRenderService();
 
-  private constructor() { }
-
-  static get bookRenderService() {
-    if (!this._bookRenderInstance) {
-      return new BookRenderService();
-    }
-    return this._bookRenderInstance;
-  }
-
-  public createBooksView(books: Book[]): HTMLDivElement {
+  createBooksView(books: Book[]): HTMLDivElement {
     let mainContainer = document.createElement("div");
     mainContainer.classList.add("container-fluid")
 
     let mainRow = document.createElement("div");
     mainRow.classList.add("row", "gy-5", "py-4", "ps-3", "ps-md-5");
 
-    books.forEach(book => {
+    let booksElement = books.map(book =>
+      `<div class="col-6 col-md-4 col-lg-3 col-xl-2 book-resume">
+        <div class="row ps-4"><img class="img-fluid col-8" src="${book.img}">
+         <span class="py-2">${this.getScoreStars(book.score)}</span>
+         <h2>${book.title}</h2>
+         <h3>${book.author.name}</h3>
+        </div>
+      </div>`
+    );
 
-      let mainCol = document.createElement("div");
-      mainCol.classList.add("col-6", "col-md-4", "col-lg-3", "col-xl-2", "book-resume");
-
-      let subRow = document.createElement("div");
-      subRow.classList.add("row", "ps-4");
-
-      let bookCover = document.createElement("img");
-      bookCover.classList.add("img-fluid", "col-8");
-      bookCover.src = book.img;
-      subRow.appendChild(bookCover);
-
-      let bookScore = document.createElement("span");
-      bookScore.classList.add("py-2");
-      bookScore.textContent = book.score.toString();
-      subRow.appendChild(bookScore);
-
-      let bookTitle = document.createElement("h2");
-      bookTitle.textContent = book.title;
-      subRow.appendChild(bookTitle);
-
-      let bookAuthor = document.createElement("h3");
-      bookAuthor.textContent = book.author.name;
-      subRow.appendChild(bookAuthor);
-
-      mainCol.appendChild(subRow);
-      mainRow.appendChild(mainCol);
-    });
-
+    booksElement.forEach(element => mainRow.insertAdjacentHTML("beforeend", element))
     mainContainer.appendChild(mainRow)
     return mainContainer;
+  }
+
+
+  private getScoreStars(score: number): string {
+    let starsScore = '';
+
+    for (let index = 0; index < score; index++) {
+      starsScore = starsScore.concat("⭐")
+    }
+
+    return starsScore;
   }
 
 }
