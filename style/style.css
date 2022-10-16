@@ -142,3 +142,27 @@ footer {
     font-size: 1rem;
     font-weight: 400;
 }
+
+/* PROFILE */
+.container {
+    position: absolute;
+    width: 409px;
+    
+    background: rgba(238, 228, 227, 0.4);
+    border: 1px solid #F4EEED;
+    border-radius: 15px;
+}
+.imageProfile1{
+width: 290px;
+height: 290px;
+left: 121px;
+top: 231px;
+}
+
+.nameProfile{
+    justify-content: center;
+}
+
+.endProfile{
+
+}
