@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate":  "23/12/2020",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Punk 57",
+    "author": {
+      "name": "Penelope Douglas"
+    },
+    "img": "../assets/img/book-cover/punk-57.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  }
+
+]
