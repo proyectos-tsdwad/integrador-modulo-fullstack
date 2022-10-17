@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate":  "23/12/2020",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  },
+  {
+    "title": "Todo por volver a verte",
+    "author": {
+      "name": "Florencia Vercellone"
+    },
+    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 0
+  }
+
+]

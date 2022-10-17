@@ -4,15 +4,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <script src="https://kit.fontawesome.com/20cfbc7c59.js" crossorigin="anonymous"></script>
+  <title>Biblioteca</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <link href="../styles/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="../style/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <h1>Hello, world!</h1>
+  <nav class="menu"> 
+    <div class="menu__logo">
+      <a href="/pages/index.html" class="fw-400"> <img src="../assets/img/Logo biblioteca franklin.png" alt="Logo biblioteca franklin" /></a>
+    </div>
+    <ul class="menu__lista">
+      <li class="menu__item fw-400"><a href="/pages/books-catalog.html">Libros</a></li>
+      <li class="menu__item fw-400"><a href="/pages/contact.html">Contacto</a></li>
+    </ul>
+
+    <form action="#">
+      <input type="search" class="search-data fw-400" placeholder="Busca tu libro" required />
+      <button type="submit" class="bi bi-search"></button>
+    </form>
+
+    <ul class="menu__auth">
+      <li class="fw-400"> <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</a></li>
+      <li class="fw-400">/</li>
+      <li class="fw-400"> <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar</a></li>
+    </ul>
+  </nav>
+
+  <footer id="footer" class="container-fluid row">
+    <div class="footer-newsletter p-5">
+      <div class="row mb-5">
+          <div class="col-lg-5">
+              <p class="news">Enterate de todas las novedades de nuestra biblioteca</p>
+          </div>
+          <div class="col-lg-7">
+              <form action="" method="post" class="row justify-content-between"> 
+                <input type="email" name="email" class="col-md-8 p-2 mb-3 mb-md-0" placeholder="Ingresá tu correo electrónico">
+                <button class="col-md-3 primary-button text-sm-center fw-800">Suscribete</button>
+              </form>
+          </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+          <img src="../assets/img/Logo biblioteca franklin.png" class="img-fluid" alt="Logo biblioteca franklin" />
+        </div>
+        <div class="col-6 col-md-3 row d-flex justify-content-around justify-content-center align-items-center">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
