@@ -144,25 +144,47 @@ footer {
 }
 
 /* PROFILE */
+
+.sectionProfile{
+    padding-top: 110px;
+}
 .container {
-    position: absolute;
-    width: 409px;
-    
     background: rgba(238, 228, 227, 0.4);
-    border: 1px solid #F4EEED;
-    border-radius: 15px;
-}
-.imageProfile1{
-width: 290px;
-height: 290px;
-left: 121px;
-top: 231px;
+border: 1px solid #F4EEED;
+border-radius: 15px;
+padding-top: 60px;
+padding-bottom: 60px;
+
 }
 
-.nameProfile{
-    justify-content: center;
+
+
+
+.imageProfile{
+    padding-left: 20%;
+    
 }
 
-.endProfile{
+b{
+    color: #041C3E;
+}
 
+h3{
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+
+color: #5D5E5F;
+}
+p{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    line-height: 150%;
+
+    color: #5D5E5F;
 }
