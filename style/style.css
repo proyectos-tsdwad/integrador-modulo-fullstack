@@ -321,7 +321,25 @@ h3 {
   margin: 0 auto;
 }
 
-img {
+/* img {
   width: 100%;
   height: auto;
+} */
+
+
+/* FEATURED INFO SECTION */
+
+.icon-backgorund{
+  background: #F6F6F7;
+  border-radius: 30px;
+}
+
+.featured-info-backgound{
+background: #FEFEFE;
+border: 1px solid rgba(0, 0, 0, 0.09);
+border-radius: 40px;
+}
+
+.extra-margin{
+  margin-top: 10rem;
 }
