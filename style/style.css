@@ -291,16 +291,3 @@ footer {
     font-size: 1rem;
     font-weight: 400;
 }
-
-
-/* Content */
-.content {
-  width: 100%;
-  max-width: auto;
-  margin: 0 auto;
-  }
-  
-  img {
-  width: 100%;
-  height: auto;
-  }
