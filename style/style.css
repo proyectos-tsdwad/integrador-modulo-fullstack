@@ -546,15 +546,22 @@ footer {
   color: var(--secondary-black);
 }
 
-/* Content */
-.content {
-  width: 100%;
-  max-width: auto;
-  margin: 0 auto;
+
+/* FEATURED INFO SECTION */
+
+.icon-backgorund{
+  background: #F6F6F7;
+  border-radius: 30px;
 }
 
-img {
-  height: auto;
+.featured-info-backgound{
+background: #FEFEFE;
+border: 1px solid rgba(0, 0, 0, 0.09);
+border-radius: 40px;
+}
+
+.extra-margin{
+  margin-top: 10rem;
 }
 
 /* PROFILE */
@@ -563,7 +570,7 @@ img {
   padding-top: 110px;
 }
 
-.container {
+.container-bgk {
   background: rgba(238, 228, 227, 0.4);
   border: 1px solid #f4eeed;
   border-radius: 15px;
