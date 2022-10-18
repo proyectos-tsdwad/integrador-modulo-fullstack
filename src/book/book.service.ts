@@ -3,6 +3,7 @@ import { Author } from "../author/author.model";
 import { Publisher } from "../publisher/publisher.model";
 import recommendedBooks from '../simulation-data/recommendedBooks.json';
 import incomingBooks from '../simulation-data/incomingBooks.json';
+import bestSellingBooks from '../simulation-data/bestSellBooks.json';
 
 export class BookService {
 
@@ -26,7 +27,7 @@ export class BookService {
 
   getBestSelling(): Book[] {
 
-    let books = recommendedBooks.map(book => new Book(
+    let books = bestSellingBooks.map(book => new Book(
       book.title, book.img, book.description, new Author(book.author.name), book.stock, new Publisher(book.publisher.name),
       book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score));
 

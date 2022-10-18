@@ -1,10 +1,10 @@
 [
   {
-    "title": "Punk 57",
+    "title": "Un cuento perfecto",
     "author": {
-      "name": "Penelope Douglas"
+      "name": "Elísabet Benavent"
     },
-    "img": "../assets/img/book-cover/punk-57.png",
+    "img": "../assets/img/book-cover/un-cuento-perfecto.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -18,11 +18,11 @@
     "stock": 0
   },
   {
-    "title": "Prisionero",
+    "title": "El camino del artista",
     "author": {
-      "name": "Roma Damned"
+      "name": "Julia Cameron"
     },
-    "img": "../assets/img/book-cover/prisionero.png",
+    "img": "../assets/img/book-cover/el-camino-del-artista.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -36,11 +36,11 @@
     "stock": 0
   },
   {
-    "title": "Boulevard",
+    "title": "Violeta",
     "author": {
-      "name": "Flor M. Salvador"
+      "name": "Isabel Allende"
     },
-    "img": "../assets/img/book-cover/boulevard.png",
+    "img": "../assets/img/book-cover/violeta.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -54,11 +54,11 @@
     "stock": 0
   },
   {
-    "title": "La casa de las grietas",
+    "title": "Pensar a la Japonesa",
     "author": {
-      "name": "Krystal Sutherland"
+      "name": "Le Yen Mai"
     },
-    "img": "../assets/img/book-cover/la-casa-de-las-grietas.png",
+    "img": "../assets/img/book-cover/pensar-a-la-japonesa.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -72,11 +72,11 @@
     "stock": 0
   },
   {
-    "title": "Un linaje oscuro",
+    "title": "Heartstopper",
     "author": {
-      "name": "Victoria Vilchez"
+      "name": "Alice Oseman"
     },
-    "img": "../assets/img/book-cover/un-linaje-oscuro.png",
+    "img": "../assets/img/book-cover/heartstopper.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -90,11 +90,11 @@
     "stock": 0
   },
   {
-    "title": "Violeta",
+    "title": "Sanar la herida",
     "author": {
-      "name": "Isabel Allende"
+      "name": "Claudia Luchetti"
     },
-    "img": "../assets/img/book-cover/violeta.png",
+    "img": "../assets/img/book-cover/sanar-la-herida.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"

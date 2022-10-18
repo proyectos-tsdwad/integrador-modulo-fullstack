@@ -18,11 +18,11 @@
     "stock": 0
   },
   {
-    "title": "Todo por volver a verte",
+    "title": "Sanar la herida",
     "author": {
-      "name": "Florencia Vercellone"
+      "name": "Claudia Luchetti"
     },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "img": "../assets/img/book-cover/sanar-la-herida.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -32,15 +32,33 @@
     "language": "",
     "genre": "",
     "releaseDate":  "23/12/2020",
-    "score": 5,
+    "score": 4,
     "stock": 0
   },
   {
-    "title": "Todo por volver a verte",
+    "title": "Buscando a Dorothy",
     "author": {
-      "name": "Florencia Vercellone"
+      "name": "Elizabeth Letts"
     },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "img": "../assets/img/book-cover/buscando-a-dorothy.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 4,
+    "stock": 0
+  },
+  {
+    "title": "Sigue mi voz",
+    "author": {
+      "name": "Ariana Godoy"
+    },
+    "img": "../assets/img/book-cover/Sigue-mi-voz.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -54,11 +72,11 @@
     "stock": 0
   },
   {
-    "title": "Todo por volver a verte",
+    "title": "La teoría de lo perfecto",
     "author": {
-      "name": "Florencia Vercellone"
+      "name": "Sophie Gonzalez"
     },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "img": "../assets/img/book-cover/la-teoria-de-lo-perfecto.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -72,11 +90,11 @@
     "stock": 0
   },
   {
-    "title": "Todo por volver a verte",
+    "title": "Un cuento perfecto",
     "author": {
-      "name": "Florencia Vercellone"
+      "name": "Elísabet Benavent"
     },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "img": "../assets/img/book-cover/un-cuento-perfecto.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -86,25 +104,7 @@
     "language": "",
     "genre": "",
     "releaseDate": "",
-    "score": 5,
-    "stock": 0
-  },
-  {
-    "title": "Todo por volver a verte",
-    "author": {
-      "name": "Florencia Vercellone"
-    },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
-    "description": "",
-    "publisher": {
-      "name": "Ivrea"
-    },
-    "isbn": "",
-    "pageAmount": 100,
-    "language": "",
-    "genre": "",
-    "releaseDate": "",
-    "score": 5,
+    "score": 4,
     "stock": 0
   }
 
