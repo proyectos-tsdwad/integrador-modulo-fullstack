@@ -9,7 +9,10 @@ const recomendedBooksElement = document.getElementById("recomended-books");
 createRecomendedBooksView();
 
 const incomingBooksElement = document.getElementById("incoming-books");
-createincomingBooksView();
+createIncomingBooksView();
+
+const bestSellingBooksElement = document.getElementById("bestselling-books");
+createBestSellingBooksView();
 
 function createRecomendedBooksView() {
 
@@ -25,7 +28,7 @@ function createRecomendedBooksView() {
 }
 
 
-function createincomingBooksView() {
+function createIncomingBooksView() {
 
   if (!incomingBooksElement) {
     return;
@@ -36,4 +39,17 @@ function createincomingBooksView() {
   let incomingBooksView: HTMLDivElement = bookRender.createBooksView(books);
 
   incomingBooksElement.appendChild(incomingBooksView);
+}
+
+function createBestSellingBooksView() {
+
+  if (!bestSellingBooksElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getBestSelling();
+
+  let incomingBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  bestSellingBooksElement.appendChild(incomingBooksView);
 }
