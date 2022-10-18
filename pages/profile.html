@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/20cfbc7c59.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
-    <title>Contacto</title>
 </head>
 <body>
+
     <nav class="menu">
         <div class="menu__logo">
-          <a href="/pages/index.html" class="fw-400"> <img src="../assets/img/Logo biblioteca franklin.png" alt="Logo biblioteca franklin" /></a>
+          <a href="./index.html" class="fw-400"> <img src="../assets/img/Logo biblioteca franklin.png" alt="Logo biblioteca franklin" /></a>
         </div>
         <ul class="menu__lista">
-          <li class="menu__item fw-400"><a href="/pages/books-catalog.html">Libros</a></li>
-          <li class="menu__item fw-400"><a href="/pages/contact.html">Contacto</a></li>
+          <li class="menu__item fw-400"><a href="./books-catalog.html">Libros</a></li>
+          <li class="menu__item fw-400"><a href="./contact.html">Contacto</a></li>
         </ul>
 
         <form action="#">
@@ -32,120 +33,65 @@
         </ul>
       </nav>
 
-    <br>
-    <div class="container container-bgk">
-
-        <div class="row">
-
-            <div class="col">
-
-                <h2 class="tittle-form-p">Contactanos</h2>
-                <p class="comment-form-p">Podes encontrarnos en nuestras redes sociales</p>
-                <br>
-                <img src="../assets/img/social.png" class="social-img">
-                <br>
-                <br>
-                <img src="../assets/img/line.png" class="line-img">
-
-                <p class="correo">Correo electrónico</p>
-                <br>
-                <div class="row">
-                    <div class="col-1">
-                        <img src="../assets/img/mail.png" class="mail-img">
-                    </div>
-                    <div class="col-11">
-                        <p class="correo-contact">contacto@biblioteca.com</p>
+    <section class="sectionProfile">
+        <div class="container container-bgk overflow-hidden ">
+            <div class="row align-items-sm-center">
+                <div class="col-4" >
+                    <div class="imageProfile">
+                        <img src="/assets/img/perfil.png" alt="" style="width: 90%;" >
                     </div>
                 </div>
-
-
-                <p class="tel">Telefono</p>
-                <br>
-                <div class="row">
-                    <div class="col-1">
-                        <img src="../assets/img/tel.png" class="tel-img">
-                    </div>
-                    <div class="col-11">
-                        <p class="tel-contact">1127876543</p>
-                    </div>
-
+                <div class="col-4">
+                        <h3 class="profileName">Julieta Morel</h3> <br>
+                        <p ><img src="/assets/img/Vector.png" alt=""> San Telmo, Caba </p>
+                        <p> <b>DNI: </b> 26789876</p>
+                        <p> <b>E-mail: </b>julietamorel@correo.com</p>
+                        <p><b>Teléfono: </b> 1127654312</p>
                 </div>
-
-
-                <p class="ubi">Ubicacion</p>
-                <br>
-                <div class="row">
-                    <div class="col-1">
-                        <img src="../assets/img/ubi.png" class="ubi-img">
-                    </div>
-                    <div class="col-11">
-                        <p class="ubi-contact">Humberto Primo 467. 2 Piso. Córdoba. Argentina.</p>
-                    </div>
+                <div class="col-4"> <br> <br> <br> <br>
+                        <p><b>Suscripción: </b> activa</p><p><b>Vencimiento: </b>02/10/2023</p><p><b>Estudiante: </b>SI</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="col align-self-center form">
+      <!-- footer -->
 
-                <h2 class="title-form">No dudes en escribirnos</h2>
-                <p class="comment-form">Dejanos tu comentario/ sugerencia, responderemos a la brevedad</p>
-                <form>
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-lg" id="InputName1" aria-describedby="emailHelp" placeholder="Nombre y apellido">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-lg" id="InputEmail1" placeholder="Correo electrónico">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-lg" id="InputComment1" placeholder="Comentario">
-                    </div>
-                    <br>
-                    <br>
-                    <button type="submit" class="btn btn-danger form-control form-control-lg">ENVIAR COMENTARIO</button>
-                  </form>
+      <footer id="footer" class="container-fluid">
+        <div class="footer-newsletter p-5">
+          <div class="row mb-5">
+            <div class="col-lg-5">
+              <p class="news">
+                Enterate de todas las novedades de nuestra biblioteca
+              </p>
             </div>
+            <div class="col-lg-7">
+              <form action="" method="post" class="row justify-content-around">
+                <input type="email" name="email" class="col-md-8 p-2 mb-3 mb-md-0"
+                  placeholder="Ingresá tu correo electrónico" />
+                <button class="col-md-3 primary-button text-sm-center fw-800">
+                  Suscribete
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+              <img src="../assets/img/Logo biblioteca franklin.png" class="img-fluid" alt="Logo biblioteca franklin" />
+            </div>
+            <div class="col-6 col-md-3 row d-flex justify-content-around justify-content-center align-items-center">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+                  class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
         </div>
-    </div>
-    <br>
-    <br>
+      </footer>
 
-    <!-- footer -->
-    <footer id="footer" class="container-fluid">
-      <div class="footer-newsletter p-5">
-        <div class="row mb-5">
-          <div class="col-lg-5">
-            <p class="news">
-              Enterate de todas las novedades de nuestra biblioteca
-            </p>
-          </div>
-          <div class="col-lg-7">
-            <form action="" method="post" class="row justify-content-around">
-              <input type="email" name="email" class="col-md-8 p-2 mb-3 mb-md-0"
-                placeholder="Ingresá tu correo electrónico" />
-              <button class="col-md-3 primary-button text-sm-center fw-800">
-                Suscribete
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="row justify-content-between">
-          <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-            <img src="../assets/img/Logo biblioteca franklin.png" class="img-fluid" alt="Logo biblioteca franklin" />
-          </div>
-          <div class="col-6 col-md-3 row d-flex justify-content-around justify-content-center align-items-center">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
-                class="fa-brands fa-twitter"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
-                class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-      <!-- Register modal-->
+    <!-- Register modal-->
 
   <div class="modal" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
@@ -263,8 +209,7 @@
     </div>
   </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
