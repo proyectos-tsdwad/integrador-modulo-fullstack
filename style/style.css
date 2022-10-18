@@ -9,6 +9,11 @@ body {
   color: var(--primary-black);
 }
 
+a:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
 /* VARIABLES */
 
 :root {
@@ -543,24 +548,25 @@ footer {
 .book-resume h3 {
   font-size: 1rem;
   font-weight: 600;
+  line-height: 100%;
   color: var(--secondary-black);
 }
 
 
 /* FEATURED INFO SECTION */
 
-.icon-backgorund{
+.icon-backgorund {
   background: #F6F6F7;
   border-radius: 30px;
 }
 
-.featured-info-backgound{
-background: #FEFEFE;
-border: 1px solid rgba(0, 0, 0, 0.09);
-border-radius: 40px;
+.featured-info-backgound {
+  background: #FEFEFE;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 40px;
 }
 
-.extra-margin{
+.extra-margin {
   margin-top: 10rem;
 }
 
@@ -609,4 +615,10 @@ p {
 /* BOOK-DETAIL */
 img {
   border-radius: 10px;
+}
+
+/* HOME RESUME BOOKS  */
+
+.index-book-title {
+  font-size: 16PX;
 }
