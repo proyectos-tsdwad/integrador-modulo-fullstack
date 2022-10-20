@@ -9,6 +9,11 @@ body {
   color: var(--primary-black);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 a:hover {
   text-decoration: none;
   color: currentColor;
@@ -509,11 +514,6 @@ footer {
 .news {
   margin: revert !important;
 }
-
-/* .footer-newsletter img {
-  width: 150px;
-  height: 150px;
-} */
 
 .footer-newsletter i {
   font-size: 2rem;
