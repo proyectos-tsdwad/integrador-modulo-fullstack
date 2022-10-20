@@ -53,6 +53,7 @@ const publisher_model_1 = __webpack_require__(5);
 const recommendedBooks_json_1 = __importDefault(__webpack_require__(6));
 const incomingBooks_json_1 = __importDefault(__webpack_require__(7));
 const bestSellBooks_json_1 = __importDefault(__webpack_require__(8));
+const sugestedBooks_json_1 = __importDefault(__webpack_require__(9));
 class BookService {
     getRecommended() {
         let books = recommendedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score));
@@ -64,6 +65,10 @@ class BookService {
     }
     getBestSelling() {
         let books = bestSellBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score));
+        return books;
+    }
+    getSugested() {
+        let books = sugestedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score));
         return books;
     }
     getByCategory() {
@@ -236,6 +241,12 @@ module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Doug
 
 module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":0},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":0},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":0}]');
 
+/***/ }),
+/* 9 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":0},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":0},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":0},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":0}]');
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -280,6 +291,8 @@ const incomingBooksElement = document.getElementById("incoming-books");
 createIncomingBooksView();
 const bestSellingBooksElement = document.getElementById("bestselling-books");
 createBestSellingBooksView();
+const sugestedBooksElement = document.getElementById("sugested-books");
+createSugestedBooksView();
 function createRecomendedBooksView() {
     if (!recomendedBooksElement) {
         return;
@@ -303,6 +316,14 @@ function createBestSellingBooksView() {
     let books = bookService.getBestSelling();
     let incomingBooksView = bookRender.createBooksView(books);
     bestSellingBooksElement.appendChild(incomingBooksView);
+}
+function createSugestedBooksView() {
+    if (!sugestedBooksElement) {
+        return;
+    }
+    let books = bookService.getSugested();
+    let sugestedBooksView = bookRender.createBooksView(books);
+    sugestedBooksElement.appendChild(sugestedBooksView);
 }
 
 })();
