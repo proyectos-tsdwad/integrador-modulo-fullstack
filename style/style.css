@@ -622,3 +622,25 @@ img {
 .index-book-title {
   font-size: 16PX;
 }
+
+/* FORM VALIDATION */
+
+.formulario [required]:valid {
+  border-bottom: 1px solid green;
+}
+.formulario [required]:invalid {
+  border-bottom: 1px solid var(--primary-red);
+}
+.formulario-error {
+  margin-top: 1rem;
+  font-size: 80%;
+  color: var(--primary-red);
+  transition: all 800ms ease;
+}
+.formulario-error.is-active {
+  display: block;
+}
+.none {
+  display: none;
+}
+
