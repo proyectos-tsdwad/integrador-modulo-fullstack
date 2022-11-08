@@ -103,25 +103,24 @@
             </div>
 
             <div class="col align-self-center form">
-
-                <h2 class="title-form">No dudes en escribirnos</h2>
-                <p class="comment-form">Dejanos tu comentario/ sugerencia, responderemos a la brevedad</p>
-                <form>
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-lg" id="InputName1" aria-describedby="emailHelp" placeholder="Nombre y apellido">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-lg" id="InputEmail1" placeholder="Correo electrónico">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-lg" id="InputComment1" placeholder="Comentario">
-                    </div>
-                    <br>
-                    <br>
-                    <button type="submit" class="btn btn-danger form-control form-control-lg">ENVIAR COMENTARIO</button>
-                  </form>
+              <h2 class="title-form">No dudes en escribirnos</h2>
+              <p class="comment-form">Dejanos tu comentario/ sugerencia, responderemos a la brevedad</p>
+              <form id="form" class="formulario">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="InputName1" name="nameContacto" title="Sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Nombre y apellido" required>
+                </div>
+                <br>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="InputEmail1" name="emailContacto" title="Ingrese un correo válido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" placeholder="Correo electrónico" required>
+                </div>
+                <br>
+                <div class="form-group">
+                  <textarea type="text" class="form-control form-control-lg" id="InputComment1" name="messageContacto" title="El campo no puede estar vacío" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Comentario" required></textarea>
+                </div>
+                <br>
+                <br>
+                <input type="submit" class="btn btn-danger form-control form-control-lg" id="button" value="ENVIAR COMENTARIO"></input>
+              </form>
             </div>
         </div>
     </div>
@@ -201,10 +200,10 @@
                     <input type="tel" class="form-control fw-300 py-2" name="telep" id="telefono" title="Solo acepta números" pattern="^[0-9]+" placeholder="Número de teléfono" required />
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidad" title="El campo no puede estar vacío" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
+                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidad" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provincia" title="El campo no puede estar vacío" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
+                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provincia" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
                   </div>
                   <div class="col-12 form-register">
                     <input type="email" class="form-control fw-300 py-2" name="email" id="mail" title="Ingrese un correo válido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" placeholder="Correo electronico" required />
@@ -303,5 +302,11 @@
     <!--   <script src="../js/logica.js"></script>
       <script src="../js/scripts.js"></script> -->
   <script src="../js/singup.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('zBqSK2-5v30BrlxCa')
+  </script>
+  <script src="../js/contact.js"></script>
 </body>
 </html>

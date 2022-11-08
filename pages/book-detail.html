@@ -220,13 +220,13 @@
                     <input type="tel" class="form-control fw-300 py-2" name="telep" id="telefono" title="Solo acepta números" pattern="^[0-9]+" placeholder="Número de teléfono" required />
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidad" title="El campo no puede estar vacío" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
+                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidad" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
                   </div>
                   <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provincia" title="El campo no puede estar vacío" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
+                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provincia" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
                   </div>
                   <div class="col-12 form-register">
-                    <input type="email" class="form-control fw-300 py-2" name="email" id="mail" title="Ingrese un correo válido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" placeholder="Correo electronico" required />
+                    <input type="email" class="form-control fw-300 py-2" name="email" id="mail" title="Ingrese un correo válido" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Correo electronico" required />
                   </div>
                   <div class="col-12 form-register">
                     <input type="password" class="form-control fw-300 py-2" name="contra" id="contrasena" title="Mínimo: 8 caracteres, 1 mayúscula y 1 número" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" placeholder="Contraseña" required />
