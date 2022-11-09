@@ -7,7 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema biblioteca-ISPC
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `biblioteca-ISPC` ;
 
 -- -----------------------------------------------------
 -- Schema biblioteca-ISPC
@@ -20,7 +19,7 @@ USE `biblioteca-ISPC` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`author` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
+  `full_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -57,6 +56,8 @@ CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`book` (
   `stock` INT NULL,
   `language` VARCHAR(45) NULL,
   `total_pages` INT NULL,
+  `book_cover` VARCHAR(45) NOT NULL,
+  `synopsis` VARCHAR(200) NULL,
   `format` VARCHAR(45) NULL,
   `author_id` INT NOT NULL,
   `publisher_id` INT NOT NULL,
@@ -88,9 +89,9 @@ ENGINE = InnoDB;
 -- Table `biblioteca-ISPC`.`role`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`role` (
-  `idrole` INT NOT NULL,
+  `id` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idrole`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -98,19 +99,23 @@ ENGINE = InnoDB;
 -- Table `biblioteca-ISPC`.`user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`user` (
-  `iduser` INT NOT NULL,
+  `id` INT NOT NULL,
   `document` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
   `telephone` VARCHAR(45) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
   `student` TINYINT NULL,
-  `role_idrole` INT NOT NULL,
-  PRIMARY KEY (`iduser`),
-  INDEX `fk_user_role1_idx` (`role_idrole` ASC) VISIBLE,
+  `area_code` VARCHAR(45) NOT NULL,
+  `province` VARCHAR(45) NOT NULL,
+  `location` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `role_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_user_role1_idx` (`role_id` ASC) VISIBLE,
   CONSTRAINT `fk_user_role1`
-    FOREIGN KEY (`role_idrole`)
-    REFERENCES `biblioteca-ISPC`.`role` (`idrole`)
+    FOREIGN KEY (`role_id`)
+    REFERENCES `biblioteca-ISPC`.`role` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -125,18 +130,18 @@ CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`loan` (
   `return_date` DATE NOT NULL,
   `active` TINYINT NOT NULL,
   `book_id` INT NOT NULL,
-  `user_iduser` INT NOT NULL,
+  `user_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_loan_book1_idx` (`book_id` ASC) VISIBLE,
-  INDEX `fk_loan_user1_idx` (`user_iduser` ASC) VISIBLE,
+  INDEX `fk_loan_user1_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_loan_book1`
     FOREIGN KEY (`book_id`)
     REFERENCES `biblioteca-ISPC`.`book` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_loan_user1`
-    FOREIGN KEY (`user_iduser`)
-    REFERENCES `biblioteca-ISPC`.`user` (`iduser`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `biblioteca-ISPC`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -146,17 +151,15 @@ ENGINE = InnoDB;
 -- Table `biblioteca-ISPC`.`subscription`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca-ISPC`.`subscription` (
-  `idsubscription` INT NOT NULL,
+  `id` INT NOT NULL,
   `due_date` DATE NOT NULL,
-  `subscriptioncol` VARCHAR(45) NOT NULL,
   `active` TINYINT NULL,
-  `subscriptioncol1` VARCHAR(45) NOT NULL,
-  `user_iduser` INT NOT NULL,
-  PRIMARY KEY (`idsubscription`),
-  INDEX `fk_subscription_user1_idx` (`user_iduser` ASC) VISIBLE,
+  `user_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_subscription_user1_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_subscription_user1`
-    FOREIGN KEY (`user_iduser`)
-    REFERENCES `biblioteca-ISPC`.`user` (`iduser`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `biblioteca-ISPC`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
