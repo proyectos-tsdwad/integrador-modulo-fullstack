@@ -23,18 +23,18 @@ class Editorial(book):
         self._name = value
    
    
-    def crearEditorial(self):
+    def create_publisher(self):
         pass
 
-    def mostrarEditorial(self):
+    def get_publisher(self):
         pass
 
-    def mostrarEditoriales(self):
+    def get_publishers(self):
         pass
 
-    def actualizarEditorial(self):
+    def edit_publisher(self):
         pass
 
-    def eliminarEditorial(self):
+    def delete_publisher(self):
         pass
     

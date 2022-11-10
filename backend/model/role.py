@@ -1,9 +1,9 @@
 class Role:
 
-    def __init__(self, id, isUser, isAdmin):
+    def __init__(self, id, name):
         self._id = id
-        self._isUser = isUser
-        self._isAdmin = isAdmin
+        self._name = name
+
 
     @property
     def id(self):
@@ -14,30 +14,26 @@ class Role:
         self._id = value
 
     @property
-    def isUser(self):
-        return self._isUser
+    def name(self):
+        return self._name
     
-    @isUser.setter
-    def isUser(self, value):
-        self._isUser = value
-
-    @property
-    def isAdmin(self):
-        return self._isAdmin
-
-    @isAdmin.setter
-    def isAdmin(self, value):
-        self._isAdmin = value
+    @name.setter
+    def name(self, value):
+        self._name = value
 
 
-    def crearRol(self):
+
+    def create_role(self):
         pass
 
-    def verRoles(self):
-        pass
-    
-    def actualizarRol(self):
+    def get_role(self):
         pass
 
-    def eliminarRol(self):
+    def get_roles(self):
+        pass
+
+    def edit_role(self):
+        pass
+
+    def detele_role(self):
         pass

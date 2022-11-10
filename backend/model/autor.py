@@ -2,10 +2,10 @@ import book
 
 class Autor(book):
 
-    def __init__(self, id, name, last_name):
+    def __init__(self, id, name):
         self._id = id
         self._name = name
-        self._last_name = last_name
+
 
     @property
     def id(self):
@@ -23,26 +23,19 @@ class Autor(book):
     def name(self, value):
         self._name = value
 
-    @property
-    def last_name(self):
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, value):
-        self._last_name = value
     
     
-    def crearAutor(self):
+    def create_author(self):
         pass
 
-    def mostrarAutor(self):
+    def get_author(self):
         pass
 
-    def mostrarAutores(self):
+    def get_authors(self):
         pass
 
-    def actualizarAutor(self):
+    def edit_autor(self):
         pass
 
-    def eliminarAutor(self):
+    def delete_author(self):
         pass

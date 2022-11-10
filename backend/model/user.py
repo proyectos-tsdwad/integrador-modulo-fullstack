@@ -3,15 +3,15 @@ import subscription
 
 class User(role, subscription):
     
-    def __init__(self, iduser, name, lastName, document, area, telephone, localidad, provincia, mail, password):
+    def __init__(self, iduser, name, lastName, document, areaCode, telephone, location, province, mail, password):
         self._id = iduser
         self._name = name
         self._lastName = lastName
         self._document = document
-        self._area = area
+        self._areaCode = areaCode
         self._telephone = telephone
-        self._localidad = localidad
-        self._provincia = provincia
+        self._location = location
+        self._province = province
         self._mail = mail
         self._password = password
 
@@ -48,12 +48,12 @@ class User(role, subscription):
         self._document = value
 
     @property
-    def area(self):
-        return self._area
+    def areaCode(self):
+        return self._areaCode
 
-    @area.setter
-    def area(self, value):
-        self._area = value   
+    @areaCode.setter
+    def areaCode(self, value):
+        self._areaCode = value   
 
     @property
     def telephone(self):
@@ -64,20 +64,20 @@ class User(role, subscription):
         self._telephone = value
 
     @property
-    def localidad(self):
-        return self._localidad
+    def location(self):
+        return self._location
 
-    @localidad.setter
-    def localidad(self, value):
-        self._localidad = value
+    @location.setter
+    def location(self, value):
+        self._location = value
 
     @property
-    def provincia(self):
-        return self._provincia
+    def province(self):
+        return self._province
 
-    @provincia.setter
-    def provincia(self, value):
-        self._provincia = value
+    @province.setter
+    def province(self, value):
+        self._province = value
 
     @property
     def mail(self):
@@ -96,17 +96,26 @@ class User(role, subscription):
         self._password = value
 
 
-    def crearUsuario(self):
+    def create_user(self):
         pass
 
-    def buscarUsuario(self):
+    def search_user(self):
         pass
 
-    def eliminarUsuario(self):
+    def edit_user(self):
         pass
 
-    def validarLogin(self):
+    def delete_user(self):
         pass
 
-    def historialPrestamos(self):
+    def get_user(self):
+        pass
+
+    def get_users(self):
+        pass
+
+    def validete_login(self):
+        pass
+
+    def loan_history(self):
         pass

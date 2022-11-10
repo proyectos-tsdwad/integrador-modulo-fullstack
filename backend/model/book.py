@@ -1,17 +1,17 @@
 class Libro:
-    def __init__(self, title, autor, img,  description, publisher, isbn, pageAmount, language, genre, releaseDate, format, score, stock):
+    def __init__(self, title, autor, img,  description, publisher, isbn, totalPage, language, genre, releaseYear, format, ranking, stock):
         self._title = title
         self._autor = autor
         self._img = img
         self._description = description
         self._publisher = publisher
         self._isbn = isbn
-        self._pageAmount = pageAmount
+        self._totalPage = totalPage
         self._language = language
         self._genre = genre
-        self._releaseDate = releaseDate
+        self._releaseYear = releaseYear
         self._format = format
-        self._score = score
+        self._ranking = ranking
         self._stock = stock
 
     @property
@@ -63,12 +63,12 @@ class Libro:
         self._isbn = value
 
     @property
-    def pageAmount(self):
-        return self._pageAmount
+    def totalPage(self):
+        return self._totalPage
 
-    @pageAmount.setter
-    def pageAmount(self, value):
-        self._pageAmount = value
+    @totalPage.setter
+    def totalPage(self, value):
+        self._totalPage = value
 
     @property
     def language(self):
@@ -87,12 +87,12 @@ class Libro:
         self._genre = value
 
     @property
-    def releaseDate(self):
-        return self._releaseDate
+    def releaseYear(self):
+        return self._releaseYear
 
-    @releaseDate.setter
-    def releaseDate(self, value):
-        self._releaseDate = value
+    @releaseYear.setter
+    def releaseYear(self, value):
+        self._releaseYear = value
 
     @property
     def format(self):
@@ -103,12 +103,12 @@ class Libro:
         self._format = value
 
     @property
-    def score(self):
-        return self._score
+    def ranking(self):
+        return self._ranking
 
-    @score.setter
-    def score(self, value):
-        self._score = value
+    @ranking.setter
+    def ranking(self, value):
+        self._ranking = value
 
     @property
     def stock(self):
@@ -120,23 +120,26 @@ class Libro:
 
 
 
-    def crearLibro():
+    def create_book():
         pass
 
-    def mostrarLibroPorId():
+    def get_book():
         pass
 
-    def mostrarLibros():
+    def get_books():
         pass
 
-    def actualizarLibros():
+    def edit_book():
         pass
 
-    def eliminarLibros():
+    def delete_book():
         pass
 
-    def buscarLibroPorNombre():
+    def search_book_byname():
         pass
 
-    def mostrarDisponibilidadLibro():
+    def search_book_byid():
+        pass
+
+    def show_book_availability():
         pass

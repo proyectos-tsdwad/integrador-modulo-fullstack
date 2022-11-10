@@ -2,9 +2,9 @@ import book
 
 class Genero(book):
 
-    def __init__(self, id, typeGenre):
+    def __init__(self, id, name):
         self._id = id
-        self._typeGenre = typeGenre
+        self._name = name
 
     @property
     def id(self):
@@ -15,25 +15,25 @@ class Genero(book):
         self._id = value
 
     @property
-    def typeGenre(self):
-        return self._typeGenre
+    def name(self):
+        return self._name
 
-    @typeGenre.setter
-    def typeGenre(self, value):
-        self._typeGenre = value
+    @name.setter
+    def name(self, value):
+        self._name = value
     
 
-    def crearGenero(self):
+    def create_genre(self):
         pass
 
-    def modificarGenero(self):
+    def edit_genre(self):
         pass
 
-    def eliminarGenero(self):
+    def delete_genre(self):
         pass
 
-    def mostrarGeneros(self):
+    def get_genre(self):
         pass
 
-    def mostrarGenero(self):
+    def get_genres(self):
         pass

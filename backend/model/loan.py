@@ -32,14 +32,17 @@ class Loan(book, user):
         self._returnDate = value
 
 
-    def crearPrestamo():
+    def crear_loan():
         pass
 
-    def modificarPrestamo():
+    def edit_loan():
         pass
 
-    def mostrarPrestamo():
+    def get_loan():
         pass
 
-    def eliminarPrestamo():
+    def get_loans():
+        pass
+
+    def delete_loan():
         pass        

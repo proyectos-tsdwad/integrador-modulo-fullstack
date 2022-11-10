@@ -1,6 +1,7 @@
 class Subscription:
-    def __init__(self, id):
+    def __init__(self, id, dueDate):
         self._id = id
+        self._dueDAte = dueDate
 
 
     @property
@@ -11,16 +12,27 @@ class Subscription:
     def id(self, value):
         self._id = value
 
+    @property
+    def dueDate(self):
+        return self._id
+
+    @dueDate.setter
+    def dueDate(self, value):
+        self._dueDate = value
 
 
-    def crearSuscripcion():
+
+    def create_subscription():
         pass
 
-    def modificarSuscripcion():
+    def edit_subscription():
         pass
 
-    def mostrarSuscripcion():
+    def get_subscription():
         pass
 
-    def eliminarSuscripcion():
+    def get_subscriptions():
+        pass
+
+    def delete_subscription():
         pass        
