@@ -9,14 +9,14 @@ function captura_boton(){
 
 function dataRead(){
     let myObject = {
-        nombre: document.querySelector("#nombre").value,
-        dni: document.querySelector("#dni").value,
-        area: document.querySelector("#area").value,
-        telefono: document.querySelector("#telefono").value,
-        localidad: document.querySelector("#localidad").value,
-        provincia: document.querySelector("#provincia").value,
-        mail: document.querySelector("#mail").value,
-        contrasena: document.querySelector("#contrasena").value,
+        nombre: document.querySelector("#nombresu").value,
+        dni: document.querySelector("#dnisu").value,
+        area: document.querySelector("#areasu").value,
+        telefono: document.querySelector("#telefonosu").value,
+        localidad: document.querySelector("#localidadsu").value,
+        provincia: document.querySelector("#provinciasu").value,
+        mail: document.querySelector("#mailsu").value,
+        contrasena: document.querySelector("#contrasenasu").value,
     };
     save_localStorage(myObject);
 }

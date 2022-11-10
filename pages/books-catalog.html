@@ -110,30 +110,30 @@
                 </div>
                 <h4 class="fw-400">Te invitamos a formar parte de nuestra comunidad</h4>
 
-                <form class="row g-3 mt-4 pe-2 needs-validation formulario" action="./profile.html">
+                <form class="row g-3 mt-4 pe-2 formulario" action="./profile.html">
                   <div class="col-12 form-register">
-                    <input type="text" class="form-control fw-300 py-2" name="name" id="nombre" title="Sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Nombre y apellido" required />
+                    <input type="text" class="form-control fw-300 py-2" name="name" id="nombresu" title="Sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Nombre y apellido" required />
                   </div>
                   <div class="col-12 form-register">
-                    <input type="text" class="form-control fw-300 py-2" name="doc" id="dni" title="DNI debe tener 7-8 dígitos (con o sin puntos)" pattern="^[\d]{1,2}\.?[\d]{3,3}\.?[\d]{3,3}$" placeholder="Documento de identidad" required />
+                    <input type="text" class="form-control fw-300 py-2" name="doc" id="dnisu" title="DNI debe tener 7-8 dígitos (con o sin puntos)" pattern="^[\d]{1,2}\.?[\d]{3,3}\.?[\d]{3,3}$" placeholder="Documento de identidad" required />
                   </div>
                   <div class="col-md-4 form-register">
-                    <input type="text" class="form-control fw-300 py-2" name="cod" id="area" title="Solo acepta números" pattern="^[0-9]+" placeholder="Código de área" required />
+                    <input type="text" class="form-control fw-300 py-2" name="cod" id="areasu" title="Solo acepta números" pattern="^[0-9]+" placeholder="Código de área" required />
                   </div>
                   <div class="col-md-8 form-register">
-                    <input type="tel" class="form-control fw-300 py-2" name="telep" id="telefono" title="Solo acepta números" pattern="^[0-9]+" placeholder="Número de teléfono" required />
+                    <input type="tel" class="form-control fw-300 py-2" name="telep" id="telefonosu" title="Solo acepta números" pattern="^[0-9]+" placeholder="Número de teléfono" required />
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidad" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
+                  <div class="col-md-6 form-register">
+                    <input type="text" class="form-control fw-300 py-2" name="local" id="localidadsu" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Localidad" required />
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provincia" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
-                  </div>
-                  <div class="col-12 form-register">
-                    <input type="email" class="form-control fw-300 py-2" name="email" id="mail" title="Ingrese un correo válido" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Correo electronico" required />
+                  <div class="col-md-6 form-register">
+                    <input type="text" class="form-control fw-300 py-2" name="prov" id="provinciasu" title="Solo acepta letras" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Provincia" required />
                   </div>
                   <div class="col-12 form-register">
-                    <input type="password" class="form-control fw-300 py-2" name="contra" id="contrasena" title="Mínimo: 8 caracteres, 1 mayúscula y 1 número" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" placeholder="Contraseña" required />
+                    <input type="email" class="form-control fw-300 py-2" name="email" id="mailsu" title="Ingrese un correo válido" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Correo electronico" required />
+                  </div>
+                  <div class="col-12 form-register">
+                    <input type="password" class="form-control fw-300 py-2" name="contra" id="contrasenasu" title="Mínimo: 8 caracteres, 1 mayúscula y 1 número" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" placeholder="Contraseña" required />
                   </div>
                   <div class="col-12 fw-300 text-end">
                     <span>
@@ -143,7 +143,7 @@
                     </span>
                   </div>
                   <div class="d-grid gap-2">
-                    <button class="primary-button fw-800" type="submit" id="crear" value="registro">
+                    <button class="primary-button fw-800 form-control" type="submit" name="crearsu" id="crear" value="registro">
                       Crear cuenta
                     </button>
                   </div>
@@ -224,9 +224,9 @@
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
   <script src="../dist/bundle.js"></script>
-    <!--   <script src="../js/logica.js"></script>
-      <script src="../js/scripts.js"></script> -->
   <script src="../js/singup.js"></script>
+  <script src="../js/logica.js"></script>
+  <script src="../js/scripts.js"></script>
 </body>
 
 </html>
