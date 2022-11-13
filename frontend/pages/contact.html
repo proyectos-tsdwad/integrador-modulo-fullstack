@@ -14,17 +14,14 @@
     <title>Contacto</title>
 </head>
 <body>
-  <nav class="menu">
-    <div class="menu__logo">
-      <a href="./index.html" class="fw-400">
-        <img src="../assets/img/Logo biblioteca franklin.png" alt="Logo biblioteca franklin" /></a>
-    </div>
-    <ul class="menu__lista">
-      <li class="menu__item fw-400">
-        <a href="./books-catalog.html">Libros</a>
-      </li>
-      <li class="menu__item fw-400"><a href="./contact.html">Contacto</a></li>
-    </ul>
+    <nav class="menu">
+        <div class="menu__logo">
+          <a href="./index.html" class="fw-400"> <img src="../assets/img/Logo biblioteca franklin.png" alt="Logo biblioteca franklin" /></a>
+        </div>
+        <ul class="menu__lista">
+          <li class="menu__item fw-400"><a href="./books-catalog.html">Libros</a></li>
+          <li class="menu__item fw-400"><a class="active" href="./contact.html">Contacto</a></li>
+        </ul>
 
     <form action="#">
       <input type="search" class="search-data fw-400" placeholder="Busca tu libro" required />
@@ -265,16 +262,10 @@
                 <!-- Fin Mensajes de Verificación -->
                 <form class="row mt-4 pe-2 needs-validation" novalidate>
                   <div class="col-12 form-register pb-4 pt-4">
-                    <input id="email" type="email" class="form-control fw-300 py-3" placeholder="Correo electronico" required>
-                    <div class="valid-feedback">Todo correcto</div>
-                    <div class="invalid-feedback">El correo no es válido</div>
+                    <input type="email" class="form-control fw-300 py-3" placeholder="Correo electronico" required>
                   </div>
                   <div class="col-12 pb-5">
-                    <input id="password" type="password" class="form-control fw-300 py-3" placeholder="Contraseña" required>
-                    <div class="valid-feedback">Todo correcto</div>
-                    <div class="invalid-feedback">
-                      El campo no puede estar vacio
-                    </div>
+                    <input type="password" class="form-control fw-300 py-3" placeholder="Contraseña" required>
                   </div>
                   <div class="d-grid gap-2 pb-5">
                     <button class="primary-button fw-800" type="submit" id="liveToast">Confirmar</button>

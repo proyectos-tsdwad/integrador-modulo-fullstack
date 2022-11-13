@@ -12,12 +12,14 @@ export class BookRenderService {
 
     let booksElement = books.map(book =>
       `<div class="col-6 col-md-4 col-lg-3 col-xl-2 book-resume">
+      <a href="./book-detail.html">
         <div class="row ps-4">
          <img src="${book.img}" alt="imagen de portada de el libro ${book.title}" class="img-fluid col-8">
          <span class="py-2">${this.getScoreStars(book.score)}</span>
          <h2>${book.title}</h2>
          <h3>${book.author.name}</h3>
         </div>
+        </a>
       </div>`
     );
 
