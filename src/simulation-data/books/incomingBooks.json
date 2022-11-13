@@ -1,10 +1,10 @@
 [
   {
-    "title": "Todo por volver a verte",
+    "title": "Punk 57",
     "author": {
-      "name": "Florencia Vercellone"
+      "name": "Penelope Douglas"
     },
-    "img": "../assets/img/book-cover/todo-por-volver-a-verte.png",
+    "img": "../assets/img/book-cover/punk-57.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -15,14 +15,15 @@
     "genre": "",
     "releaseDate": "",
     "score": 5,
-    "stock": 0
+    "stock": 100,
+    "rentedTotal": 10
   },
   {
-    "title": "Sanar la herida",
+    "title": "Prisionero",
     "author": {
-      "name": "Claudia Luchetti"
+      "name": "Roma Damned"
     },
-    "img": "../assets/img/book-cover/sanar-la-herida.png",
+    "img": "../assets/img/book-cover/prisionero.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -33,32 +34,15 @@
     "genre": "",
     "releaseDate":  "23/12/2020",
     "score": 4,
-    "stock": 0
+    "stock": 100,
+    "rentedTotal": 10
   },
   {
-    "title": "Buscando a Dorothy",
+    "title": "Boulevard",
     "author": {
-      "name": "Elizabeth Letts"
+      "name": "Flor M. Salvador"
     },
-    "img": "../assets/img/book-cover/buscando-a-dorothy.png",
-    "description": "",
-    "publisher": {
-      "name": "Ivrea"
-    },
-    "isbn": "",
-    "pageAmount": 100,
-    "language": "",
-    "genre": "",
-    "releaseDate": "",
-    "score": 4,
-    "stock": 0
-  },
-  {
-    "title": "Sigue mi voz",
-    "author": {
-      "name": "Ariana Godoy"
-    },
-    "img": "../assets/img/book-cover/Sigue-mi-voz.png",
+    "img": "../assets/img/book-cover/boulevard.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -69,32 +53,15 @@
     "genre": "",
     "releaseDate": "",
     "score": 5,
-    "stock": 0
+    "stock": 100,
+    "rentedTotal": 10
   },
   {
-    "title": "La teoría de lo perfecto",
+    "title": "La casa de las grietas",
     "author": {
-      "name": "Sophie Gonzalez"
+      "name": "Krystal Sutherland"
     },
-    "img": "../assets/img/book-cover/la-teoria-de-lo-perfecto.png",
-    "description": "",
-    "publisher": {
-      "name": "Ivrea"
-    },
-    "isbn": "",
-    "pageAmount": 100,
-    "language": "",
-    "genre": "",
-    "releaseDate": "",
-    "score": 5,
-    "stock": 0
-  },
-  {
-    "title": "Un cuento perfecto",
-    "author": {
-      "name": "Elísabet Benavent"
-    },
-    "img": "../assets/img/book-cover/un-cuento-perfecto.png",
+    "img": "../assets/img/book-cover/la-casa-de-las-grietas.png",
     "description": "",
     "publisher": {
       "name": "Ivrea"
@@ -105,7 +72,46 @@
     "genre": "",
     "releaseDate": "",
     "score": 4,
-    "stock": 0
+    "stock": 100,
+    "rentedTotal": 10
+  },
+  {
+    "title": "Un linaje oscuro",
+    "author": {
+      "name": "Victoria Vilchez"
+    },
+    "img": "../assets/img/book-cover/un-linaje-oscuro.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 5,
+    "stock": 100,
+    "rentedTotal": 10
+  },
+  {
+    "title": "Violeta",
+    "author": {
+      "name": "Isabel Allende"
+    },
+    "img": "../assets/img/book-cover/violeta.png",
+    "description": "",
+    "publisher": {
+      "name": "Ivrea"
+    },
+    "isbn": "",
+    "pageAmount": 100,
+    "language": "",
+    "genre": "",
+    "releaseDate": "",
+    "score": 4,
+    "stock": 100,
+    "rentedTotal": 10
   }
 
 ]

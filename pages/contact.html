@@ -28,21 +28,21 @@
 
     <form action="#">
       <input type="search" class="search-data fw-400" placeholder="Busca tu libro" required />
-      <button type="submit" class="bi bi-search"></button>
+      <button type="submit" role="button" title="buscar" class="bi bi-search"></button>
     </form>
 
     <ul class="menu__auth">
       <li id="menu___item__login" class="fw-400">
         <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar/</a>
       </li>
-      
+
       <li id="menu___item__perfil" class="fw-400 d-none">
         <a href="./profile.html" id="menu___item__perfil_a">Ver Perfil/</a>
       </li>
-      
+
       <li id="menu___item__logout" class="fw-400 d-none">
         <a href="#" id="menu___item__logout_a" onclick="logout()">Salir</a>
-       
+
       </li>
       <li id="menu___item__register" class="fw-400">
         <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Registrar</a>
@@ -60,16 +60,16 @@
                 <h2 class="tittle-form-p">Contactanos</h2>
                 <p class="comment-form-p">Podes encontrarnos en nuestras redes sociales</p>
                 <br>
-                <img src="../assets/img/social.png" class="social-img">
+                <img src="../assets/img/social.png" class="social-img" alt="Imagen red social">
                 <br>
                 <br>
-                <img src="../assets/img/line.png" class="line-img">
+                <img src="../assets/img/line.png" class="line-img" alt="Imagen de telefono">
 
                 <p class="correo">Correo electrónico</p>
                 <br>
                 <div class="row">
                     <div class="col-1">
-                        <img src="../assets/img/mail.png" class="mail-img">
+                        <img src="../assets/img/mail.png" class="mail-img" alt="Imagen de correo">
                     </div>
                     <div class="col-11">
                         <p class="correo-contact">contacto@biblioteca.com</p>
@@ -81,7 +81,7 @@
                 <br>
                 <div class="row">
                     <div class="col-1">
-                        <img src="../assets/img/tel.png" class="tel-img">
+                        <img src="../assets/img/tel.png" class="tel-img" alt="Imagen telefono">
                     </div>
                     <div class="col-11">
                         <p class="tel-contact">1127876543</p>
@@ -94,7 +94,7 @@
                 <br>
                 <div class="row">
                     <div class="col-1">
-                        <img src="../assets/img/ubi.png" class="ubi-img">
+                        <img src="../assets/img/ubi.png" class="ubi-img" alt="Imagen ubicación">
                     </div>
                     <div class="col-11">
                         <p class="ubi-contact">Humberto Primo 467. 2 Piso. Córdoba. Argentina.</p>
@@ -140,7 +140,7 @@
             <form action="" method="post" class="row justify-content-around">
               <input type="email" name="email" class="col-md-8 p-2 mb-3 mb-md-0"
                 placeholder="Ingresá tu correo electrónico" />
-              <button class="col-md-3 primary-button text-sm-center fw-800">
+              <button type="submit" role="button" class="col-md-3 primary-button text-sm-center fw-800">
                 Suscribete
               </button>
             </form>
@@ -151,11 +151,11 @@
             <img src="../assets/img/Logo biblioteca franklin.png" class="img-fluid" alt="Logo biblioteca franklin" />
           </div>
           <div class="col-6 col-md-3 row d-flex justify-content-around justify-content-center align-items-center">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+            <a type="link" title="Instagram" href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
                 class="fa-brands fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+            <a type="link" title="Twitter" href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
                 class="fa-brands fa-twitter"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
+            <a type="link" title="Facebook" href="#" target="_blank" rel="noopener noreferrer" class="col-1 text-primary-red"><i
                 class="fa-brands fa-facebook"></i></a>
           </div>
         </div>
@@ -260,7 +260,7 @@
                   La Contraseña o el email no coinciden, vuelve a intentar !
                 </div>
                 <div id="ok" class="alert alert-success d-none" role="alert">
-                  Conectando ... 
+                  Conectando ...
                </div>
                 <!-- Fin Mensajes de Verificación -->
                 <form class="row mt-4 pe-2 needs-validation" novalidate>

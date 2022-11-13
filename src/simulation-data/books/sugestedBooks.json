@@ -15,7 +15,8 @@
       "genre": "",
       "releaseDate": "",
       "score": 5,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     },
     {
       "title": "Prisionero",
@@ -33,7 +34,8 @@
       "genre": "",
       "releaseDate":  "23/12/2020",
       "score": 4,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     },
     {
       "title": "Boulevard",
@@ -51,7 +53,8 @@
       "genre": "",
       "releaseDate": "",
       "score": 5,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     },
     {
       "title": "La casa de las grietas",
@@ -69,7 +72,8 @@
       "genre": "",
       "releaseDate": "",
       "score": 4,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     },
     {
       "title": "Un linaje oscuro",
@@ -87,7 +91,8 @@
       "genre": "",
       "releaseDate": "",
       "score": 5,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     },
     {
       "title": "Violeta",
@@ -105,8 +110,8 @@
       "genre": "",
       "releaseDate": "",
       "score": 4,
-      "stock": 0
+      "stock": 100,
+      "rentedTotal": 10
     }
-  
+
 ]
-  

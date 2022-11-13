@@ -15,9 +15,10 @@ export class Book {
   private _releaseDate: Date;
   private _score: number;
   private _stock: number;
+  private _rentedTotal: number;
 
   constructor(title: string, img: string, description: string, author: Author, stock: number, publisher: Publisher,
-    isbn: string, pageAmount: number, language: string, genre: string, releaseDate: Date, score: number) {
+    isbn: string, pageAmount: number, language: string, genre: string, releaseDate: Date, score: number, rentedTotal: number) {
     this._title = title;
     this._img = img;
     this._description = description;
@@ -30,6 +31,7 @@ export class Book {
     this._genre = genre;
     this._score = score;
     this._releaseDate = releaseDate;
+    this._rentedTotal = rentedTotal;
   }
 
   public get title(): string {
@@ -126,6 +128,10 @@ export class Book {
 
   public set stock(stock: number) {
     this._stock = stock;
+  }
+
+  public get rentedTotal(): number {
+    return this._rentedTotal;
   }
 
 }
