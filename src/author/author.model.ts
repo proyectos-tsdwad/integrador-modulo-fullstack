@@ -8,7 +8,7 @@ export class Author {
 
 
   public get name(): string {
-    return this._name
+    return this._name;
   }
 
   public set name(name: string) {

@@ -24,14 +24,21 @@ a:hover {
 :root {
   --primary-red: #a02a44;
   --secondary-red: #e35352;
+  --secondary-alter-red: #F45351;
   --primary-pink: #eee4e39c;
+  --primary-pink-opac: rgba(234, 216, 216, 0.3);
   --secondary-pink: #eddcdc;
   --primary-green: #b9cc4c;
+  --secondary-green: #45DB66;
   --primary-yellow: #f8b84e;
   --primary-black: #5d5e5f;
   --primary-black-opac: rgba(93, 94, 95, 0.9);
   --secondary-black: #303754;
   --primary-grey: #a1a1a5;
+  --secondary-grey: #EFEFEF;
+  --primary-blue: #237EA6;
+  --primary-white: #F5F5F5;
+  --secondary-white: #FFFFFF;
 }
 
 /* COMMONS */
@@ -43,13 +50,34 @@ a:hover {
   padding-bottom: 0.7rem;
   border-radius: 10px;
   background-color: var(--secondary-red);
-  transition-duration: 1s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.primary-button-outline {
+  color: var(--primary-black);
+  border: solid;
+  border-color: var(--secondary-red);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 18px;
+  background-color: white;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .primary-button:hover {
   color: white;
   background-color: var(--primary-red);
-  transition-duration: 1s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.primary-button-outline:hover {
+  color: white;
+  background-color: var(--secondary-red);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .text-primary-red {
@@ -58,6 +86,10 @@ a:hover {
 
 .text-secondary-red {
   color: var(--secondary-red);
+}
+
+.text-secondary-alter-red {
+  color: var(--secondary-alter-red);
 }
 
 .text-primary-black {
@@ -80,12 +112,32 @@ a:hover {
   color: var(--primary-yellow);
 }
 
+.text-secondary-green {
+  color: var(--secondary-green);
+}
+
+.text-secondary-alter-red {
+  color: var(--secondary-alter-red);
+}
+
 .bg-primary-pink {
   background-color: var(--primary-pink);
 }
 
+.bg-primary-pink-opac {
+  background-color: var(--primary-pink-opac);
+}
+
 .bg-secondary-pink {
   background-color: var(--secondary-pink);
+}
+
+.bg-primary-white {
+  background-color: var(--primary-white);
+}
+
+.bg-secondary-white {
+  background-color: var(--secondary-white);
 }
 
 .fw-300 {
@@ -628,19 +680,63 @@ img {
 .formulario [required]:valid {
   border-bottom: 1px solid green;
 }
+
 .formulario [required]:invalid {
   border-bottom: 1px solid var(--primary-red);
 }
+
 .formulario-error {
   margin-top: 1rem;
   font-size: 80%;
   color: var(--primary-red);
   transition: all 800ms ease;
 }
+
 .formulario-error.is-active {
   display: block;
 }
+
 .none {
   display: none;
 }
 
+/* BOOKS DASHBOARD */
+
+.db-tittle {
+  font-size: 26px;
+}
+
+.trash-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-red);
+}
+
+.edit-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--primary-blue);
+}
+
+
+.table td {
+  font-size: 1rem;
+  font-weight: 400;
+  /* padding: 1.8rem 0rem; */
+}
+
+.dashboard-table {
+  border: solid;
+  border-width: 0.01rem;
+  border-color: var(--primary-black-extra-opac);
+  border-radius: 18px;
+}
+
+/* USERS DASHBOARD */
+
+.status-pill{
+  font-size: 0.9rem;;
+  font-weight: 400;
+  color: var(--primary-black);
+  background-color: var(--secondary-grey);
+}
