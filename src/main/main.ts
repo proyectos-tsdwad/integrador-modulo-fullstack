@@ -31,6 +31,22 @@ createUsersDashboard();
 const booksCatalogElement = document.getElementById("books-catalog");
 createBooksCatalog();
 
+const booksRenResumeElement = document.getElementById("books-rent-resume");
+createBooksRentResume();
+
+const actualRentsElement = document.getElementById("actual-rents");
+actualRentsElement?.classList.add('active');
+actualRentsElement?.addEventListener("click", () => {
+  resetActiveClass(actualRentsElement);
+  renderActualRents();
+});
+
+const historyRentalElement = document.getElementById("history-rents");
+historyRentalElement?.addEventListener("click", () => {
+  resetActiveClass(historyRentalElement);
+  renderRentalHistory();
+});
+
 const allGenresElement = document.getElementById("all-genres");
 allGenresElement?.classList.add('active');
 allGenresElement?.addEventListener("click", () => {
@@ -82,6 +98,8 @@ function resetActiveClass(activeElement: HTMLElement) {
   childrensGenreElement?.classList.remove('active');
   youthGenreElement?.classList.remove('active');
   bussinesGenreElement?.classList.remove('active');
+  actualRentsElement?.classList.remove('active');
+  historyRentalElement?.classList.remove('active');
 
   activeElement.classList.add('active')
 }
@@ -191,4 +209,45 @@ function renderCatalogByGenre(genre: string) {
 
   booksCatalogElement.innerHTML = '';
   booksCatalogElement.appendChild(catalogBooksView);
+}
+
+function createBooksRentResume() {;
+
+  if (!booksRenResumeElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getActualRented();
+
+  let catalogBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  booksRenResumeElement.appendChild(catalogBooksView);
+}
+
+function renderActualRents() {
+
+  if (!booksRenResumeElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getActualRented();
+
+  let catalogBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  booksRenResumeElement.innerHTML = '';
+  booksRenResumeElement.appendChild(catalogBooksView);
+}
+
+function renderRentalHistory() {
+
+  if (!booksRenResumeElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getRentalHistory();
+
+  let catalogBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  booksRenResumeElement.innerHTML = '';
+  booksRenResumeElement.appendChild(catalogBooksView);
 }
