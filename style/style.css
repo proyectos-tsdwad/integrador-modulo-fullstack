@@ -740,3 +740,20 @@ img {
   color: var(--primary-black);
   background-color: var(--secondary-grey);
 }
+
+/* BOOK CATALOG */
+
+.catalog-menu a{
+  text-decoration: none;
+  color: var(--primary-grey);
+}
+
+.catalog-menu a.active{
+  text-decoration: underline;
+  color: var(--secondary-red);
+}
+
+.catalog-menu a:hover{
+  text-decoration: underline;
+  color: var(--secondary-red);
+}
