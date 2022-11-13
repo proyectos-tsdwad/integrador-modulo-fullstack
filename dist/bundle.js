@@ -3,89 +3,6 @@
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.BookRenderService = void 0;
-class BookRenderService {
-    createBooksView(books) {
-        let mainContainer = document.createElement("div");
-        mainContainer.classList.add("container-fluid");
-        let mainRow = document.createElement("div");
-        mainRow.classList.add("row", "gy-5", "py-4", "ps-3", "ps-md-5");
-        let booksElement = books.map(book => `<div class="col-6 col-md-4 col-lg-3 col-xl-2 book-resume">
-        <div class="row ps-4">
-         <img src="${book.img}" alt="imagen de portada de el libro ${book.title}" class="img-fluid col-8">
-         <span class="py-2">${this.getScoreStars(book.score)}</span>
-         <h2>${book.title}</h2>
-         <h3>${book.author.name}</h3>
-        </div>
-      </div>`);
-        booksElement.forEach(element => mainRow.insertAdjacentHTML("beforeend", element));
-        mainContainer.appendChild(mainRow);
-        return mainContainer;
-    }
-    createBooksTableview(books) {
-        let table = document.createElement("table");
-        let tbody = document.createElement("tbody");
-        table.classList.add("table", "table-hover", "align-middle");
-        let head = `<thead>
-    <tr>
-      <th scope="col">Libro</th>
-      <th scope="col">Autor</th>
-      <th scope="col">Stock</th>
-      <th scope="col">Prestados</th>
-      <th scope="col">Disponibles</th>
-      <th scope="col">Acciones</th>
-    </tr>
-  </thead>`;
-        table.insertAdjacentHTML("beforeend", head);
-        let booksElement = books.map(book => `<tr>
-    <td>
-      <div class="row">
-        <div class="col-8 col-lg-2">
-          <img src="${book.img}" alt="imagen de portada de el libro ${book.title}" class="img-fluid">
-        </div>
-        <div class="col-12 col-lg-5 align-self-center">
-          <span>${book.title}</span>
-        </div>
-      </div>
-    </td>
-    <td>${book.author.name}</td>
-    <td>${book.stock}</td>
-    <td>${book.rentedTotal}</td>
-    <td>${Math.max(0, book.stock - book.rentedTotal)}</td>
-    <td>
-      <div class="row">
-        <div class="col-3">
-          <button class="edit-btn" type="button" role="button" title="editar"><i class="bi bi-pencil-square"></i>
-          </button>
-        </div>
-        <div class="col-3">
-          <button class="trash-btn" type="button" role="button" title="eliminar"><i class="bi bi-trash3"></i>
-          </button>
-        </div>
-      </div>
-    </td>
-  </tr>`);
-        booksElement.forEach(element => tbody.insertAdjacentHTML("beforeend", element));
-        table.appendChild(tbody);
-        return table;
-    }
-    getScoreStars(score) {
-        let starsScore = '';
-        for (let index = 0; index < score; index++) {
-            starsScore = starsScore.concat("⭐");
-        }
-        return starsScore;
-    }
-}
-exports.BookRenderService = BookRenderService;
-
-
-/***/ }),
-/* 2 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -94,14 +11,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BookService = void 0;
-const book_model_1 = __webpack_require__(3);
-const author_model_1 = __webpack_require__(4);
-const publisher_model_1 = __webpack_require__(5);
-const recommendedBooks_json_1 = __importDefault(__webpack_require__(6));
-const incomingBooks_json_1 = __importDefault(__webpack_require__(8));
-const bestSellBooks_json_1 = __importDefault(__webpack_require__(10));
-const sugestedBooks_json_1 = __importDefault(__webpack_require__(11));
-const allBooks_json_1 = __importDefault(__webpack_require__(12));
+const book_model_1 = __webpack_require__(2);
+const author_model_1 = __webpack_require__(3);
+const publisher_model_1 = __webpack_require__(4);
+const recommendedBooks_json_1 = __importDefault(__webpack_require__(5));
+const incomingBooks_json_1 = __importDefault(__webpack_require__(6));
+const bestSellBooks_json_1 = __importDefault(__webpack_require__(7));
+const sugestedBooks_json_1 = __importDefault(__webpack_require__(8));
+const allBooks_json_1 = __importDefault(__webpack_require__(9));
 class BookService {
     getRecommended() {
         let books = recommendedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
@@ -123,8 +40,9 @@ class BookService {
         let books = allBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
         return books;
     }
-    getByCategory() {
-        let books = recommendedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
+    getByGenre(genre) {
+        genre = genre.trim().toLowerCase();
+        let books = allBooks_json_1.default.filter(book => book.genre.trim().toLowerCase().includes(genre) || genre === 'todos').map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
         return books;
     }
     getRentalHistory() {
@@ -136,7 +54,7 @@ exports.BookService = BookService;
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -238,7 +156,7 @@ exports.Book = Book;
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -259,7 +177,7 @@ exports.Author = Author;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -280,13 +198,120 @@ exports.Publisher = Publisher;
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ ((module) => {
 
 module.exports = JSON.parse('[{"title":"Todo por volver a verte","author":{"name":"Florencia Vercellone"},"img":"../assets/img/book-cover/todo-por-volver-a-verte.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Buscando a Dorothy","author":{"name":"Elizabeth Letts"},"img":"../assets/img/book-cover/buscando-a-dorothy.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Sigue mi voz","author":{"name":"Ariana Godoy"},"img":"../assets/img/book-cover/Sigue-mi-voz.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La teoría de lo perfecto","author":{"name":"Sophie Gonzalez"},"img":"../assets/img/book-cover/la-teoria-de-lo-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
 
 /***/ }),
+/* 6 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
 /* 7 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
+/* 8 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
+/* 9 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"infantil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"arte gastronomia","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio gastronomia","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"arte","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"ficcion","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"ficcion gastronomia","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"ficcion","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Todo por volver a verte","author":{"name":"Florencia Vercellone"},"img":"../assets/img/book-cover/todo-por-volver-a-verte.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"infantil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Buscando a Dorothy","author":{"name":"Elizabeth Letts"},"img":"../assets/img/book-cover/buscando-a-dorothy.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"infantil","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Sigue mi voz","author":{"name":"Ariana Godoy"},"img":"../assets/img/book-cover/Sigue-mi-voz.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La teoría de lo perfecto","author":{"name":"Sophie Gonzalez"},"img":"../assets/img/book-cover/la-teoria-de-lo-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
+/* 10 */
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.BookRenderService = void 0;
+class BookRenderService {
+    createBooksView(books) {
+        let mainContainer = document.createElement("div");
+        mainContainer.classList.add("container-fluid");
+        let mainRow = document.createElement("div");
+        mainRow.classList.add("row", "gy-5", "py-4", "ps-3", "ps-md-5");
+        let booksElement = books.map(book => `<div class="col-6 col-md-4 col-lg-3 col-xl-2 book-resume">
+        <div class="row ps-4">
+         <img src="${book.img}" alt="imagen de portada de el libro ${book.title}" class="img-fluid col-8">
+         <span class="py-2">${this.getScoreStars(book.score)}</span>
+         <h2>${book.title}</h2>
+         <h3>${book.author.name}</h3>
+        </div>
+      </div>`);
+        booksElement.forEach(element => mainRow.insertAdjacentHTML("beforeend", element));
+        mainContainer.appendChild(mainRow);
+        return mainContainer;
+    }
+    createBooksTableview(books) {
+        let table = document.createElement("table");
+        let tbody = document.createElement("tbody");
+        table.classList.add("table", "table-hover", "align-middle");
+        let head = `<thead>
+    <tr>
+      <th scope="col">Libro</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Prestados</th>
+      <th scope="col">Disponibles</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>`;
+        table.insertAdjacentHTML("beforeend", head);
+        let booksElement = books.map(book => `<tr>
+    <td>
+      <div class="row">
+        <div class="col-8 col-lg-2">
+          <img src="${book.img}" alt="imagen de portada de el libro ${book.title}" class="img-fluid">
+        </div>
+        <div class="col-12 col-lg-5 align-self-center">
+          <span>${book.title}</span>
+        </div>
+      </div>
+    </td>
+    <td>${book.author.name}</td>
+    <td>${book.stock}</td>
+    <td>${book.rentedTotal}</td>
+    <td>${Math.max(0, book.stock - book.rentedTotal)}</td>
+    <td>
+      <div class="row">
+        <div class="col-3">
+          <button class="edit-btn" type="button" role="button" title="editar"><i class="bi bi-pencil-square"></i>
+          </button>
+        </div>
+        <div class="col-3">
+          <button class="trash-btn" type="button" role="button" title="eliminar"><i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+    </td>
+  </tr>`);
+        booksElement.forEach(element => tbody.insertAdjacentHTML("beforeend", element));
+        table.appendChild(tbody);
+        return table;
+    }
+    getScoreStars(score) {
+        let starsScore = '';
+        for (let index = 0; index < score; index++) {
+            starsScore = starsScore.concat("⭐");
+        }
+        return starsScore;
+    }
+}
+exports.BookRenderService = BookRenderService;
+
+
+/***/ }),
+/* 11 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -295,7 +320,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UserService = void 0;
-const user_model_1 = __webpack_require__(9);
+const user_model_1 = __webpack_require__(12);
 const allUsers_json_1 = __importDefault(__webpack_require__(13));
 class UserService {
     getAllUsers() {
@@ -307,13 +332,7 @@ exports.UserService = UserService;
 
 
 /***/ }),
-/* 8 */
-/***/ ((module) => {
-
-module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
-
-/***/ }),
-/* 9 */
+/* 12 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -360,24 +379,6 @@ class User {
 }
 exports.User = User;
 
-
-/***/ }),
-/* 10 */
-/***/ ((module) => {
-
-module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
-
-/***/ }),
-/* 11 */
-/***/ ((module) => {
-
-module.exports = JSON.parse('[{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
-
-/***/ }),
-/* 12 */
-/***/ ((module) => {
-
-module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Punk 57","author":{"name":"Penelope Douglas"},"img":"../assets/img/book-cover/punk-57.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Prisionero","author":{"name":"Roma Damned"},"img":"../assets/img/book-cover/prisionero.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Boulevard","author":{"name":"Flor M. Salvador"},"img":"../assets/img/book-cover/boulevard.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La casa de las grietas","author":{"name":"Krystal Sutherland"},"img":"../assets/img/book-cover/la-casa-de-las-grietas.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Un linaje oscuro","author":{"name":"Victoria Vilchez"},"img":"../assets/img/book-cover/un-linaje-oscuro.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Todo por volver a verte","author":{"name":"Florencia Vercellone"},"img":"../assets/img/book-cover/todo-por-volver-a-verte.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Buscando a Dorothy","author":{"name":"Elizabeth Letts"},"img":"../assets/img/book-cover/buscando-a-dorothy.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Sigue mi voz","author":{"name":"Ariana Godoy"},"img":"../assets/img/book-cover/Sigue-mi-voz.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La teoría de lo perfecto","author":{"name":"Sophie Gonzalez"},"img":"../assets/img/book-cover/la-teoria-de-lo-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"","releaseDate":"","score":5,"stock":100,"rentedTotal":10}]');
 
 /***/ }),
 /* 13 */
@@ -471,9 +472,9 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const book_service_1 = __webpack_require__(2);
-const book_render_service_1 = __webpack_require__(1);
-const user_service_1 = __webpack_require__(7);
+const book_service_1 = __webpack_require__(1);
+const book_render_service_1 = __webpack_require__(10);
+const user_service_1 = __webpack_require__(11);
 const user_render_service_1 = __webpack_require__(14);
 const bookService = new book_service_1.BookService();
 const bookRender = new book_render_service_1.BookRenderService();
@@ -491,6 +492,54 @@ const dashboardBooksElement = document.getElementById("books-dashboard");
 createBooksDashboard();
 const dashboardUsersElement = document.getElementById("users-dashboard");
 createUsersDashboard();
+const booksCatalogElement = document.getElementById("books-catalog");
+createBooksCatalog();
+const allGenresElement = document.getElementById("all-genres");
+allGenresElement?.classList.add('active');
+allGenresElement?.addEventListener("click", () => {
+    resetActiveClass(allGenresElement);
+    renderCatalogByGenre('todos');
+});
+const artGenreElement = document.getElementById("art-genre");
+artGenreElement?.addEventListener("click", () => {
+    resetActiveClass(artGenreElement);
+    renderCatalogByGenre('arte');
+});
+const scyfyGenreElement = document.getElementById("scyfy-genre");
+scyfyGenreElement?.addEventListener("click", () => {
+    resetActiveClass(scyfyGenreElement);
+    renderCatalogByGenre('ficcion');
+});
+const gastronomyGenreElement = document.getElementById("gastronomy-genre");
+gastronomyGenreElement?.addEventListener("click", () => {
+    resetActiveClass(gastronomyGenreElement);
+    renderCatalogByGenre('gastronomia');
+});
+const childrensGenreElement = document.getElementById("childrens-genre");
+childrensGenreElement?.addEventListener("click", () => {
+    resetActiveClass(childrensGenreElement);
+    renderCatalogByGenre('infantil');
+});
+const youthGenreElement = document.getElementById("youth -genre");
+youthGenreElement?.addEventListener("click", () => {
+    resetActiveClass(youthGenreElement);
+    renderCatalogByGenre('juvenil');
+});
+const bussinesGenreElement = document.getElementById("bussines -genre");
+bussinesGenreElement?.addEventListener("click", () => {
+    resetActiveClass(bussinesGenreElement);
+    renderCatalogByGenre('negocio');
+});
+function resetActiveClass(activeElement) {
+    allGenresElement?.classList.remove('active');
+    artGenreElement?.classList.remove('active');
+    scyfyGenreElement?.classList.remove('active');
+    gastronomyGenreElement?.classList.remove('active');
+    childrensGenreElement?.classList.remove('active');
+    youthGenreElement?.classList.remove('active');
+    bussinesGenreElement?.classList.remove('active');
+    activeElement.classList.add('active');
+}
 function createRecomendedBooksView() {
     if (!recomendedBooksElement) {
         return;
@@ -538,6 +587,23 @@ function createUsersDashboard() {
     let users = userService.getAllUsers();
     let usersDashboardView = userRender.createUserssTableview(users);
     dashboardUsersElement.appendChild(usersDashboardView);
+}
+function createBooksCatalog() {
+    if (!booksCatalogElement) {
+        return;
+    }
+    let books = bookService.getAllBooks();
+    let catalogBooksView = bookRender.createBooksView(books);
+    booksCatalogElement.appendChild(catalogBooksView);
+}
+function renderCatalogByGenre(genre) {
+    if (!booksCatalogElement) {
+        return;
+    }
+    let books = bookService.getByGenre(genre);
+    let catalogBooksView = bookRender.createBooksView(books);
+    booksCatalogElement.innerHTML = '';
+    booksCatalogElement.appendChild(catalogBooksView);
 }
 
 })();

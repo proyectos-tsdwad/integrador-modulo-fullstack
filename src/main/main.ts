@@ -28,6 +28,65 @@ createBooksDashboard();
 const dashboardUsersElement = document.getElementById("users-dashboard");
 createUsersDashboard();
 
+const booksCatalogElement = document.getElementById("books-catalog");
+createBooksCatalog();
+
+const allGenresElement = document.getElementById("all-genres");
+allGenresElement?.classList.add('active');
+allGenresElement?.addEventListener("click", () => {
+  resetActiveClass(allGenresElement);
+  renderCatalogByGenre('todos');
+});
+
+const artGenreElement = document.getElementById("art-genre");
+artGenreElement?.addEventListener("click", () => {
+  resetActiveClass(artGenreElement);
+  renderCatalogByGenre('arte');
+});
+
+const scyfyGenreElement = document.getElementById("scyfy-genre");
+scyfyGenreElement?.addEventListener("click", () => {
+  resetActiveClass(scyfyGenreElement);
+  renderCatalogByGenre('ficcion');
+});
+
+const gastronomyGenreElement = document.getElementById("gastronomy-genre");
+gastronomyGenreElement?.addEventListener("click", () => {
+  resetActiveClass(gastronomyGenreElement);
+  renderCatalogByGenre('gastronomia');
+});
+
+const childrensGenreElement = document.getElementById("childrens-genre");
+childrensGenreElement?.addEventListener("click", () => {
+  resetActiveClass(childrensGenreElement);
+  renderCatalogByGenre('infantil');
+});
+
+const youthGenreElement = document.getElementById("youth -genre");
+youthGenreElement?.addEventListener("click", () => {
+  resetActiveClass(youthGenreElement);
+  renderCatalogByGenre('juvenil');
+});
+
+const bussinesGenreElement = document.getElementById("bussines -genre");
+bussinesGenreElement?.addEventListener("click", () => {
+  resetActiveClass(bussinesGenreElement);
+  renderCatalogByGenre('negocio');
+});
+
+function resetActiveClass(activeElement: HTMLElement) {
+  allGenresElement?.classList.remove('active');
+  artGenreElement?.classList.remove('active');
+  scyfyGenreElement?.classList.remove('active');
+  gastronomyGenreElement?.classList.remove('active');
+  childrensGenreElement?.classList.remove('active');
+  youthGenreElement?.classList.remove('active');
+  bussinesGenreElement?.classList.remove('active');
+
+  activeElement.classList.add('active')
+}
+
+
 function createRecomendedBooksView() {
 
   if (!recomendedBooksElement) {
@@ -105,4 +164,31 @@ function createUsersDashboard() {
   let usersDashboardView: HTMLDivElement = userRender.createUserssTableview(users);
 
   dashboardUsersElement.appendChild(usersDashboardView);
+}
+
+function createBooksCatalog() {
+
+  if (!booksCatalogElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getAllBooks();
+
+  let catalogBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  booksCatalogElement.appendChild(catalogBooksView);
+}
+
+function renderCatalogByGenre(genre: string) {
+
+  if (!booksCatalogElement) {
+    return;
+  }
+
+  let books: Book[] = bookService.getByGenre(genre);
+
+  let catalogBooksView: HTMLDivElement = bookRender.createBooksView(books);
+
+  booksCatalogElement.innerHTML = '';
+  booksCatalogElement.appendChild(catalogBooksView);
 }

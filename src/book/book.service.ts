@@ -55,9 +55,10 @@ export class BookService {
     return books;
   }
 
-  getByCategory(): Book[] {
+  getByGenre(genre: string): Book[] {
+      genre = genre.trim().toLowerCase();
 
-    let books = recommendedBooks.map(book => new Book(
+    let books = allBooks.filter(book => book.genre.trim().toLowerCase().includes(genre) || genre === 'todos' ).map(book => new Book(
       book.title, book.img, book.description, new Author(book.author.name), book.stock, new Publisher(book.publisher.name),
       book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
 
