@@ -19,6 +19,8 @@ const incomingBooks_json_1 = __importDefault(__webpack_require__(6));
 const bestSellBooks_json_1 = __importDefault(__webpack_require__(7));
 const sugestedBooks_json_1 = __importDefault(__webpack_require__(8));
 const allBooks_json_1 = __importDefault(__webpack_require__(9));
+const actualRentedBooks_json_1 = __importDefault(__webpack_require__(10));
+const historyRentedBooks_json_1 = __importDefault(__webpack_require__(11));
 class BookService {
     getRecommended() {
         let books = recommendedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
@@ -46,7 +48,11 @@ class BookService {
         return books;
     }
     getRentalHistory() {
-        let books = recommendedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
+        let books = historyRentedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
+        return books;
+    }
+    getActualRented() {
+        let books = actualRentedBooks_json_1.default.map(book => new book_model_1.Book(book.title, book.img, book.description, new author_model_1.Author(book.author.name), book.stock, new publisher_model_1.Publisher(book.publisher.name), book.isbn, book.pageAmount, book.language, book.genre, new Date(book.releaseDate), book.score, book.rentedTotal));
         return books;
     }
 }
@@ -229,6 +235,18 @@ module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"El
 
 /***/ }),
 /* 10 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Buscando a Dorothy","author":{"name":"Elizabeth Letts"},"img":"../assets/img/book-cover/buscando-a-dorothy.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"infantil","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Sigue mi voz","author":{"name":"Ariana Godoy"},"img":"../assets/img/book-cover/Sigue-mi-voz.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"La teoría de lo perfecto","author":{"name":"Sophie Gonzalez"},"img":"../assets/img/book-cover/la-teoria-de-lo-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
+/* 11 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Un cuento perfecto","author":{"name":"Elísabet Benavent"},"img":"../assets/img/book-cover/un-cuento-perfecto.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"infantil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"El camino del artista","author":{"name":"Julia Cameron"},"img":"../assets/img/book-cover/el-camino-del-artista.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"arte gastronomia","releaseDate":"23/12/2020","score":4,"stock":100,"rentedTotal":10},{"title":"Violeta","author":{"name":"Isabel Allende"},"img":"../assets/img/book-cover/violeta.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Pensar a la Japonesa","author":{"name":"Le Yen Mai"},"img":"../assets/img/book-cover/pensar-a-la-japonesa.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"negocio gastronomia","releaseDate":"","score":4,"stock":100,"rentedTotal":10},{"title":"Heartstopper","author":{"name":"Alice Oseman"},"img":"../assets/img/book-cover/heartstopper.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":5,"stock":100,"rentedTotal":10},{"title":"Sanar la herida","author":{"name":"Claudia Luchetti"},"img":"../assets/img/book-cover/sanar-la-herida.png","description":"","publisher":{"name":"Ivrea"},"isbn":"","pageAmount":100,"language":"","genre":"juvenil","releaseDate":"","score":4,"stock":100,"rentedTotal":10}]');
+
+/***/ }),
+/* 12 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -311,7 +329,7 @@ exports.BookRenderService = BookRenderService;
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -320,8 +338,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UserService = void 0;
-const user_model_1 = __webpack_require__(12);
-const allUsers_json_1 = __importDefault(__webpack_require__(13));
+const user_model_1 = __webpack_require__(14);
+const allUsers_json_1 = __importDefault(__webpack_require__(15));
 class UserService {
     getAllUsers() {
         let users = allUsers_json_1.default.map(user => new user_model_1.User(user.name, user.profilePic, user.supscription, user.rentedTotal, user.actualRented));
@@ -332,7 +350,7 @@ exports.UserService = UserService;
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -381,13 +399,13 @@ exports.User = User;
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ ((module) => {
 
 module.exports = JSON.parse('[{"name":"Mariano Salgado","supscription":true,"profilePic":"../assets/img/users-profile-photos/mariano-salgado.png","actualRented":2,"rentedTotal":4},{"name":"Mariana Herrera","supscription":false,"profilePic":"../assets/img/users-profile-photos/mariana-herrera.png","actualRented":0,"rentedTotal":10},{"name":"Pedro Altamar","supscription":true,"profilePic":"../assets/img/users-profile-photos/pedro-altamar.png","actualRented":3,"rentedTotal":5},{"name":"juan-cruz","supscription":true,"profilePic":"../assets/img/users-profile-photos/juan-cruz.png","actualRented":1,"rentedTotal":6},{"name":"Romina Belp","supscription":true,"profilePic":"../assets/img/users-profile-photos/romina-belp.png","actualRented":2,"rentedTotal":8},{"name":"Jonathan Hernandez","supscription":false,"profilePic":"../assets/img/users-profile-photos/jonathan-hernandez.png","actualRented":0,"rentedTotal":15},{"name":"Marcos Guerrin","supscription":false,"profilePic":"../assets/img/users-profile-photos/marcos-guerrin.png","actualRented":0,"rentedTotal":2},{"name":"Lucia Estrada","supscription":false,"profilePic":"../assets/img/users-profile-photos/lucia-estrada.png","actualRented":4,"rentedTotal":24}]');
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -473,9 +491,9 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const book_service_1 = __webpack_require__(1);
-const book_render_service_1 = __webpack_require__(10);
-const user_service_1 = __webpack_require__(11);
-const user_render_service_1 = __webpack_require__(14);
+const book_render_service_1 = __webpack_require__(12);
+const user_service_1 = __webpack_require__(13);
+const user_render_service_1 = __webpack_require__(16);
 const bookService = new book_service_1.BookService();
 const bookRender = new book_render_service_1.BookRenderService();
 const userService = new user_service_1.UserService();
@@ -494,6 +512,19 @@ const dashboardUsersElement = document.getElementById("users-dashboard");
 createUsersDashboard();
 const booksCatalogElement = document.getElementById("books-catalog");
 createBooksCatalog();
+const booksRenResumeElement = document.getElementById("books-rent-resume");
+createBooksRentResume();
+const actualRentsElement = document.getElementById("actual-rents");
+actualRentsElement?.classList.add('active');
+actualRentsElement?.addEventListener("click", () => {
+    resetActiveClass(actualRentsElement);
+    renderActualRents();
+});
+const historyRentalElement = document.getElementById("history-rents");
+historyRentalElement?.addEventListener("click", () => {
+    resetActiveClass(historyRentalElement);
+    renderRentalHistory();
+});
 const allGenresElement = document.getElementById("all-genres");
 allGenresElement?.classList.add('active');
 allGenresElement?.addEventListener("click", () => {
@@ -538,6 +569,8 @@ function resetActiveClass(activeElement) {
     childrensGenreElement?.classList.remove('active');
     youthGenreElement?.classList.remove('active');
     bussinesGenreElement?.classList.remove('active');
+    actualRentsElement?.classList.remove('active');
+    historyRentalElement?.classList.remove('active');
     activeElement.classList.add('active');
 }
 function createRecomendedBooksView() {
@@ -604,6 +637,33 @@ function renderCatalogByGenre(genre) {
     let catalogBooksView = bookRender.createBooksView(books);
     booksCatalogElement.innerHTML = '';
     booksCatalogElement.appendChild(catalogBooksView);
+}
+function createBooksRentResume() {
+    ;
+    if (!booksRenResumeElement) {
+        return;
+    }
+    let books = bookService.getActualRented();
+    let catalogBooksView = bookRender.createBooksView(books);
+    booksRenResumeElement.appendChild(catalogBooksView);
+}
+function renderActualRents() {
+    if (!booksRenResumeElement) {
+        return;
+    }
+    let books = bookService.getActualRented();
+    let catalogBooksView = bookRender.createBooksView(books);
+    booksRenResumeElement.innerHTML = '';
+    booksRenResumeElement.appendChild(catalogBooksView);
+}
+function renderRentalHistory() {
+    if (!booksRenResumeElement) {
+        return;
+    }
+    let books = bookService.getRentalHistory();
+    let catalogBooksView = bookRender.createBooksView(books);
+    booksRenResumeElement.innerHTML = '';
+    booksRenResumeElement.appendChild(catalogBooksView);
 }
 
 })();

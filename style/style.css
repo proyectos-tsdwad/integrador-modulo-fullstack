@@ -749,11 +749,13 @@ img {
 }
 
 .catalog-menu a.active{
-  text-decoration: underline;
+  font-weight: 700;
   color: var(--secondary-red);
+  text-decoration: underline;
 }
 
 .catalog-menu a:hover{
-  text-decoration: underline;
+  font-weight: 700;
   color: var(--secondary-red);
+  text-decoration: underline;
 }
