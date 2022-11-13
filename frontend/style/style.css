@@ -759,3 +759,8 @@ img {
   color: var(--secondary-red);
   text-decoration: underline;
 }
+
+  a.active{
+  font-weight: 700;
+  color: var(--secondary-red);
+}
