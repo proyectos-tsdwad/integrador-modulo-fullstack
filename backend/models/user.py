@@ -1,5 +1,6 @@
 from models.role import Role
 from models.subscription import Subscription
+from CRUD.user_crud import UserCrud
 
 
 class User:
@@ -17,6 +18,7 @@ class User:
     self._password = password
     self._role = Role()
     self._subscription = Subscription()
+    self.crud = UserCrud()
 
   @property
   def id(self):
@@ -115,22 +117,22 @@ class User:
     self._subscription = value
 
   def create_user(self):
-    pass
+    self.crud.save_user()
 
   def search_user(self):
     pass
 
   def edit_user(self):
-    pass
+    self.crud.update_user()
 
   def delete_user(self):
-    pass
+    self.crud.delete_user()
 
   def get_user(self):
     pass
 
   def get_users(self):
-    pass
+    self.crud.get_users()
 
   def validate_login(self):
     pass

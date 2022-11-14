@@ -1,19 +1,18 @@
 from models.user import User
 
-
 class UserService:
 
   def __init__(self) -> None:
-    pass
+    user = User()
 
   def create_user(self):
-    pass
+    self.user.create_user()
 
   def get_users(self):
-    pass
+    self.user.get_users()
 
   def delete_user(self):
-    pass
+    self.user.delete_user()
 
   def edit_user(self):
-    pass
+    self.user.edit_user()

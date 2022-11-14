@@ -47,7 +47,7 @@ Es necesario instalar ... mediante ....
 [Grupo 16 - ISPC - Wordpress](http://grupo16.42web.io)
 
 ## Sitio Web Biblioteca Franklin
-[Biblioteca Franklin](PONER EL LINK DEL SITIO)
+[Biblioteca Franklin](https://proyectos-tsdwad.github.io/integrador-modulo-fullstack/frontend/pages/index.html)
 
 ## Demo del sitio
 [Video demostración](PONER EL LINK DEL VIDEO CUANDO LO SUBAMOS A DOCUMENTACION)
