@@ -6,18 +6,19 @@ En este repositorio realizamos un Proyecto Grupal para el Módulo Programador Fu
 El proyecto consiste en una Aplicación Web que permite a los usuarios registrados reservar un libro de su interés de forma Online.
 
 # Tabla de Contenido:
-- Caracteristicas
-- Diseño
-- Dependencias
-- Sitio Institucional
-- Sitio Web Biblioteca Franklin
-- Equipo
+1. [Características](#características)
+2. [Diseño](#diseño)
+3. [Dependencias](#dependencias)
+4. [Sitio Institucional](#sitio-institucional)
+5. [Sitio Web Biblioteca Franklin](#sitio-web-biblioteca-franklin)
+6. [Demo del sitio](#demo-del-sitio)
+7. [Equipo](#equipo)
 
-## Caracteristicas
-- Singup y Login: 
+## Características
+- **Singup y Login:** 
     + Formularios con validaciones
     + LocalStorage
-- Vistas:  
+- **Vistas:**  
     + Usuario/Cliente registrado:
         * Perfil de usuario 
         * Reservas actuales del usuario
@@ -25,35 +26,35 @@ El proyecto consiste en una Aplicación Web que permite a los usuarios registrad
     + Administrador:
         * Puede ver los usuarios registrados y sus actividades recientes
         * Puede ver los libros registrados y sus movimientos recientes       
-- Catálogo de libros:
+- **Catálogo de libros:**
     + Recomendados
     + Más vendidos
     + Novedades
     + Filtro por categoría
     + Cada libro lleva a una página donde se muestran "mas detalles" sobre el libro seleccionado y ahí se puede realizar la reserva
-- Método de Contacto:
+- **Método de Contacto:**
     + Formulario con validaciones
     + Se consume API EmailJs y el email llega correctamente al email del proyecto
-- Sitio Responsive
+- **Sitio Responsive**
  
 ## Diseño
-Biblioteca Franklin Figma
+[Biblioteca Franklin Figma](https://www.figma.com/file/AkOD1vuaVk4IBh6NEYdsod/Biblioteca?node-id=0%3A1)
 
 ## Dependencias
 Es necesario instalar ... mediante ....  
 
 ## Sitio Institucional
-Grupo 16 - ISPC - Wordpress
+[Grupo 16 - ISPC - Wordpress](http://grupo16.42web.io)
 
 ## Sitio Web Biblioteca Franklin
-Biblioteca Franklin
+[Biblioteca Franklin](PONER EL LINK DEL SITIO)
 
-##Demo del sitio
-Video demostración
+## Demo del sitio
+[Video demostración](PONER EL LINK DEL VIDEO CUANDO LO SUBAMOS A DOCUMENTACION)
 
 ## Equipo
-- Carlos Linero
-- Carla Rios Suarez
-- Nelson Vilte
-- Claudio Silva
-- Jesica Aramayo
+- [Carlos Linero](https://github.com/carlos-linero)
+- [Carla Rios Suarez](https://github.com/carlariossuarez)
+- [Nelson Vilte](https://github.com/nelsonvilte)
+- [Claudio Silva](https://github.com/ClaudioFabianSilva)
+- [Jesica Aramayo](https://github.com/Jesica-A)
