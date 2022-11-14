@@ -1,11 +1,11 @@
 function validarUser() {
 
-  var email = document.getElementById("email").value;
-  console.log(email);
+  var emailog = document.getElementById("emailog").value;
+  console.log(emailog);
 
-  var password = document.getElementById("password").value;
-
-  authorization = validarCredenciales(email, password);
+  var password = document.getElementById("passlog").value;
+  console.log(password);
+  authorization = validarCredenciales(emailog, password);
 
   if (authorization) {
     // Si los datos coinciden ocultamos el mensaje de error
