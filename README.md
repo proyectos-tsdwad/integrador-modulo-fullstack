@@ -44,6 +44,8 @@ El proyecto consiste en una Aplicación Web que permite a los usuarios registrad
 
 ## Sitio Web Biblioteca Franklin
 [Biblioteca Franklin](https://proyectos-tsdwad.github.io/integrador-modulo-fullstack/frontend/pages/index.html)
+[Biblioteca Franklin](https://proyectos-tsdwad.github.io/integrador-modulo-fullstack/frontend/pages/index.html)
+[Biblioteca Franklin - user profile](https://proyectos-tsdwad.github.io/integrador-modulo-fullstack/frontend/pages/profile.html)
 
 ## Demo del sitio
 [Video demostración](https://drive.google.com/file/d/1MGCwzLiTRX_4vfQmr1HcqAVHvRYfGTfz/view?usp=sharing)
