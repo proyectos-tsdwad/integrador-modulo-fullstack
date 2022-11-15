@@ -48,7 +48,7 @@ El proyecto consiste en una Aplicación Web que permite a los usuarios registrad
 - [Biblioteca Franklin - user profile](https://proyectos-tsdwad.github.io/integrador-modulo-fullstack/frontend/pages/profile.html)
 
 ## Demo del sitio
-[Video demostración](https://drive.google.com/file/d/1MGCwzLiTRX_4vfQmr1HcqAVHvRYfGTfz/view?usp=sharing)
+[Link video demostración](https://drive.google.com/file/d/1MGCwzLiTRX_4vfQmr1HcqAVHvRYfGTfz/view?usp=sharing)
 
 ## Equipo
 - [Carlos Linero](https://github.com/carlos-linero)
