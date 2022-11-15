@@ -70,7 +70,7 @@ export class BookRenderService {
           </button>
         </div>
         <div class="col-3">
-          <button class="trash-btn" type="button" role="button" title="eliminar"><i class="bi bi-trash3"></i>
+          <button class="trash-btn" type="button" role="button" title="eliminar" data-bs-toggle="modal" data-bs-target="#deleteBook"><i class="bi bi-trash3"></i>
           </button>
         </div>
       </div>

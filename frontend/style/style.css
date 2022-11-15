@@ -28,6 +28,7 @@ a:hover {
   --primary-pink: #eee4e39c;
   --primary-pink-opac: rgba(234, 216, 216, 0.3);
   --secondary-pink: #eddcdc;
+  --secondary-alter-pink: #F4EEED;
   --primary-green: #b9cc4c;
   --secondary-green: #45DB66;
   --primary-yellow: #f8b84e;
@@ -46,9 +47,9 @@ a:hover {
 .primary-button {
   color: white;
   border: none;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  border-radius: 10px;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 18px;
   background-color: var(--secondary-red);
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -130,6 +131,10 @@ a:hover {
 
 .bg-secondary-pink {
   background-color: var(--secondary-pink);
+}
+
+.bg-secondary-alter-pink {
+  background-color: var(--secondary-alter-pink);
 }
 
 .bg-primary-white {
@@ -763,4 +768,10 @@ img {
   a.active{
   font-weight: 700;
   color: var(--secondary-red);
+}
+
+/* CONTACTO */
+
+.form-space {
+  border-radius: 18px;
 }
