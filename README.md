@@ -8,11 +8,10 @@ El proyecto consiste en una Aplicación Web que permite a los usuarios registrad
 # Tabla de Contenido:
 1. [Características](#características)
 2. [Diseño](#diseño)
-3. [Dependencias](#dependencias)
-4. [Sitio Institucional](#sitio-institucional)
-5. [Sitio Web Biblioteca Franklin](#sitio-web-biblioteca-franklin)
-6. [Demo del sitio](#demo-del-sitio)
-7. [Equipo](#equipo)
+3. [Sitio Institucional](#sitio-institucional)
+4. [Sitio Web Biblioteca Franklin](#sitio-web-biblioteca-franklin)
+5. [Demo del sitio](#demo-del-sitio)
+6. [Equipo](#equipo)
 
 ## Características
 - **Singup y Login:** 
@@ -39,9 +38,6 @@ El proyecto consiste en una Aplicación Web que permite a los usuarios registrad
  
 ## Diseño
 [Biblioteca Franklin Figma](https://www.figma.com/file/AkOD1vuaVk4IBh6NEYdsod/Biblioteca?node-id=0%3A1)
-
-## Dependencias
-Es necesario instalar ... mediante ....  
 
 ## Sitio Institucional
 [Grupo 16 - ISPC - Wordpress](http://grupo16.42web.io)
